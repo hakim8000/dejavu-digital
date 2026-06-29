@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEJAVU DIGITAL — Agence Google Ads &amp; génération de leads</title>
+<meta name="description" content="DEJAVU DIGITAL LTD — agence de media buying spécialisée Google Ads. Nous concevons, lançons et optimisons les campagnes Search de génération de leads de nos clients, depuis notre compte administrateur (MCC).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#0f152b; --card:#121a33; --line:#222d4d;
+    --ink:#eef2ff; --mut:#9fb0d6; --accent:#5b8cff; --accent2:#7af0c8;
+    --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;padding:13px 22px;border-radius:10px;transition:transform .15s ease,background .15s ease}
+  .btn:hover{background:#7aa2ff;transform:translateY(-1px)}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+  .btn.ghost:hover{border-color:var(--accent);background:rgba(91,140,255,.08)}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.3px}
+  .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#06122a;font-weight:800}
+  .nav-links{display:flex;gap:26px;align-items:center;color:var(--mut);font-weight:500;font-size:.95rem}
+  .nav-links a:hover{color:var(--ink)}
+  @media(max-width:720px){.nav-links a:not(.btn){display:none}}
+
+  /* Hero */
+  .hero{padding:88px 0 70px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:-200px 0 auto auto;width:620px;height:620px;background:radial-gradient(circle at center,rgba(91,140,255,.22),transparent 60%);pointer-events:none}
+  .eyebrow{display:inline-block;color:var(--accent2);font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+  h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.08;font-weight:800;letter-spacing:-.02em}
+  h1 .hl{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{color:var(--mut);font-size:1.16rem;max-width:640px;margin:22px 0 30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{margin-top:34px;color:var(--mut);font-size:.9rem;display:flex;gap:22px;flex-wrap:wrap}
+  .trust b{color:var(--ink)}
+
+  /* Sections */
+  section{padding:64px 0}
+  .sec-head{max-width:620px;margin-bottom:38px}
+  .sec-head .eyebrow{margin-bottom:14px}
+  h2{font-size:clamp(1.6rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.01em}
+  .sec-head p{color:var(--mut);margin-top:12px}
+
+  .grid{display:grid;gap:18px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .card h3{font-size:1.12rem;margin-bottom:8px}
+  .card p{color:var(--mut);font-size:.97rem}
+  .ic{width:42px;height:42px;border-radius:11px;background:rgba(91,140,255,.14);display:grid;place-items:center;margin-bottom:16px;font-size:1.2rem}
+
+  .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{counter-reset:s}
+  .step{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .step .n{counter-increment:s;flex:0 0 auto;width:38px;height:38px;border-radius:50%;border:1px solid var(--accent);color:var(--accent2);display:grid;place-items:center;font-weight:700}
+  .step .n::before{content:counter(s,decimal-leading-zero)}
+  .step h3{font-size:1.06rem;margin-bottom:4px}
+  .step p{color:var(--mut);font-size:.97rem}
+
+  /* Contact */
+  .contact-card{background:linear-gradient(135deg,rgba(91,140,255,.14),rgba(122,240,200,.08));border:1px solid var(--line);border-radius:20px;padding:42px;text-align:center}
+  .contact-card h2{margin-bottom:10px}
+  .contact-card p{color:var(--mut);max-width:520px;margin:0 auto 24px}
+  .mail{font-size:1.15rem;font-weight:600;color:var(--accent2)}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mut);font-size:.88rem}
+  .foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .foot a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="logo">D</span> DEJAVU&nbsp;DIGITAL</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#methode">Méthode</a>
+      <a href="#agence">L'agence</a>
+      <a href="#contact" class="btn">Nous contacter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Agence Google Ads · Media buying</span>
+      <h1>Des campagnes Google Ads<br><span class="hl">pensées pour générer des leads.</span></h1>
+      <p class="lead">DEJAVU DIGITAL conçoit, lance et optimise les campagnes Google Ads de ses clients —
+        de la stratégie de mots-clés au suivi des conversions — depuis son compte administrateur (MCC).
+        Un pilotage data, augmenté par l'IA, et une création publicitaire soignée.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn">Discuter de votre projet</a>
+        <a href="#services" class="btn ghost">Voir nos services</a>
+      </div>
+      <div class="trust">
+        <span>📈 <b>Search lead-gen</b> &amp; suivi des conversions</span>
+        <span>🛠️ <b>Gestion en MCC</b> multi-comptes</span>
+        <span>🤝 <b>Au résultat</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Ce que nous faisons</span>
+        <h2>Le Search qui transforme, de bout en bout</h2>
+        <p>Nous prenons en charge l'intégralité du cycle d'une campagne de génération de leads sur le Réseau de Recherche Google.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card"><div class="ic">🎯</div><h3>Stratégie &amp; campagnes Search</h3><p>Recherche de mots-clés, architecture de campagnes, rédaction des annonces responsives (RSA) et exclusions — orientées intention d'achat.</p></div>
+        <div class="card"><div class="ic">📊</div><h3>Suivi des conversions</h3><p>Mise en place du tracking (Google Tag, conversions hors ligne, Enhanced Conversions) pour mesurer ce qui compte vraiment : les vrais leads.</p></div>
+        <div class="card"><div class="ic">⚙️</div><h3>Optimisation continue</h3><p>Pilotage quotidien des enchères, des budgets et des termes de recherche. Itération basée sur la donnée, pas sur l'intuition.</p></div>
+        <div class="card"><div class="ic">🗂️</div><h3>Gestion de compte (MCC)</h3><p>Vos campagnes sont gérées depuis notre compte administrateur, sous mandat. Vous gardez la propriété du compte et de sa facturation.</p></div>
+        <div class="card"><div class="ic">📥</div><h3>Landing &amp; tunnel de lead</h3><p>Pages d'acquisition orientées conversion, capture du GCLID et connexion au CRM pour une attribution complète.</p></div>
+        <div class="card"><div class="ic">🎬</div><h3>Création premium</h3><p>Visuels et vidéos publicitaires produits avec notre pôle créatif partenaire, pour des annonces qui se démarquent.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="methode" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Notre méthode</span>
+        <h2>Du brief au lead qualifié</h2>
+        <p>Une approche transparente, mesurable et tournée vers un seul objectif : votre retour sur investissement.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n"></div><div><h3>Cadrage &amp; objectifs</h3><p>Nous analysons votre marché, vos marges et votre coût d'acquisition cible pour bâtir une stratégie réaliste.</p></div></div>
+        <div class="step"><div class="n"></div><div><h3>Mise en place</h3><p>Liaison du compte à notre MCC, structure des campagnes, tracking des conversions et page d'acquisition.</p></div></div>
+        <div class="step"><div class="n"></div><div><h3>Lancement maîtrisé</h3><p>Démarrage sur un budget test, campagnes Search uniquement, sous contrôle humain avant toute montée en charge.</p></div></div>
+        <div class="step"><div class="n"></div><div><h3>Optimisation &amp; reporting</h3><p>Ajustements continus et reporting clair. Nous sommes rémunérés sur la performance des campagnes gérées.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="agence">
+    <div class="wrap">
+      <div class="grid g2" style="align-items:center">
+        <div>
+          <span class="eyebrow">L'agence</span>
+          <h2 style="margin:14px 0 14px">Media buying augmenté par l'IA, création premium</h2>
+          <p style="color:var(--mut)">DEJAVU DIGITAL LTD est une agence de marketing digital qui gère, sous mandat,
+            les comptes Google Ads de ses clients. Nous combinons un pilotage data outillé (automatisation et
+            assistance IA) avec une exigence créative, pour livrer des campagnes Search rentables sur les marchés
+            francophones — Belgique, Luxembourg et au-delà.</p>
+          <p style="color:var(--mut);margin-top:14px">Notre conviction : un euro de média n'a de valeur que s'il est
+            tracké, optimisé et relié à un vrai lead. C'est ce que nous construisons pour chaque client.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:14px">En bref</h3>
+          <p style="margin-bottom:10px"><b style="color:var(--ink)">Spécialité</b> — Google Ads, Réseau de Recherche, génération de leads.</p>
+          <p style="margin-bottom:10px"><b style="color:var(--ink)">Modèle</b> — gestion sous mandat, rémunération à la performance.</p>
+          <p style="margin-bottom:10px"><b style="color:var(--ink)">Marchés</b> — francophones (BE / LU).</p>
+          <p><b style="color:var(--ink)">Société</b> — DEJAVU DIGITAL LTD, immatriculée au Royaume-Uni (Companies House n° 14175430).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <div class="contact-card">
+        <span class="eyebrow">Contact</span>
+        <h2>Parlons de vos campagnes</h2>
+        <p>Un projet de génération de leads, un compte Google Ads à reprendre en main ? Écrivez-nous, nous revenons vers vous rapidement.</p>
+        <a class="mail" href="mailto:comptegpt001@gmail.com">comptegpt001@gmail.com</a>
+        <div style="margin-top:24px"><a href="mailto:comptegpt001@gmail.com" class="btn">Demander un échange</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 <b style="color:var(--ink)">DEJAVU DIGITAL LTD</b> — Company No. 14175430 (United Kingdom)</div>
+    <div><a href="mailto:comptegpt001@gmail.com">comptegpt001@gmail.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
