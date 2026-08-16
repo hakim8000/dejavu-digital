@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEJAVU DIGITAL — Agence Meta Ads à Bruxelles</title>
+<meta name="description" content="Agence Meta Ads à Bruxelles. Nous transformons un budget publicitaire en rendez-vous, et nous comptons ce qui arrive chez le client — pas ce que la plateforme déclare.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#000; --paper:#fff; --line:#000;
+    /* palette de la référence */
+    --lime:#e9fb71; --pink:#ed79f7; --blue:#3550f5; --purple:#bb96f8; --green:#7cf97d;
+    --gray:#6b6b6b; --gray-d:#a8a8a8;
+    /* tonalité de section (surchargée par .tone-*) */
+    --bg:var(--paper); --fg:var(--ink); --mut:var(--gray); --rule:var(--ink);
+    --sans:"Helvetica Neue","Archivo",Helvetica,Arial,sans-serif;
+    --cond:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --pad:clamp(16px,3.2vw,40px);
+    --gap:clamp(14px,2vw,28px);
+    --vspace:clamp(64px,10vw,150px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.22;
+       -webkit-font-smoothing:antialiased;overflow-x:hidden;font-synthesis:none}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--lime);color:#000}
+
+  /* ---------- grille : contenu en colonnes 2 → 11 comme la référence ---------- */
+  .wrap{padding-left:var(--pad);padding-right:var(--pad)}
+  .g12{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
+  .inner{grid-column:1/-1}
+  @media(min-width:1000px){ .inner{grid-column:2/12} }
+
+  .sub12{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
+  @media(min-width:1000px){
+    .col-l{grid-column:1/6} .col-r{grid-column:6/-1}
+    .col-n{grid-column:1/2} .col-t{grid-column:2/6} .col-d{grid-column:6/-1}
+    .col-m{grid-column:1/4} .col-b{grid-column:4/-1}
+  }
+  @media(max-width:999px){ .col-l,.col-r,.col-n,.col-t,.col-d,.col-m,.col-b{grid-column:1/-1} }
+
+  /* ---------- typographie ---------- */
+  h1,h2,h3,.fig{font-weight:800;letter-spacing:-.045em;line-height:.9;text-wrap:balance}
+  h1{font-size:clamp(2.9rem,9vw,8.4rem);font-stretch:92%}
+  h2{font-size:clamp(2.1rem,6vw,5.2rem);font-stretch:94%}
+  h3{font-size:clamp(1.3rem,2.3vw,2rem);line-height:1;letter-spacing:-.035em}
+  p{font-size:clamp(.98rem,1.15vw,1.15rem);line-height:1.42}
+  .lead{font-size:clamp(1.15rem,2.2vw,2rem);line-height:1.16;font-weight:600;letter-spacing:-.03em}
+  .small{font-size:clamp(.8rem,.95vw,.9rem);line-height:1.5;color:var(--mut)}
+  .label{font-family:var(--cond);font-size:.74rem;font-weight:600;letter-spacing:.14em;
+         text-transform:uppercase;color:var(--gray)}
+
+  /* ---------- boutons pilule + flèche diagonale ---------- */
+  .btn{display:inline-flex;align-items:center;gap:.7em;border:1px solid currentColor;border-radius:999px;
+       padding:.9em 1.7em;font-size:clamp(.85rem,1vw,.98rem);font-weight:700;letter-spacing:-.01em;
+       transition:background .28s ease,color .28s ease,border-color .28s ease;white-space:nowrap}
+  .btn svg{width:12px;height:12px;flex:0 0 auto;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+  .btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn:hover svg{transform:translate(3px,-3px)}
+  .btn.fill{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn.fill:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+  .btn.inv{color:var(--paper);border-color:var(--paper)}
+  .btn.inv:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+
+  .tag{display:inline-block;border-radius:999px;padding:.42em 1.05em;font-size:.74rem;font-weight:700;
+       text-transform:lowercase;letter-spacing:.005em;color:#000;white-space:nowrap}
+  .t-lime{background:var(--lime)} .t-pink{background:var(--pink)} .t-blue{background:var(--blue);color:#fff}
+  /* un badge ne doit jamais se fondre dans le fond de sa section */
+  .tone-lime .t-lime{background:#000;color:var(--lime)}
+  .tone-pink .t-pink{background:#000;color:var(--pink)}
+  .tone-blue .t-blue{background:#fff;color:var(--blue)}
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+         border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-weight:800;font-size:1rem;letter-spacing:-.05em;font-stretch:88%}
+  .brand sup{font-size:.48em;letter-spacing:.04em;color:var(--gray);margin-left:.4em;vertical-align:super;font-weight:600}
+  .nav-links{display:flex;gap:clamp(12px,1.8vw,26px);align-items:center;font-size:.86rem;font-weight:600}
+  .nav-links a:not(.btn){position:relative;letter-spacing:-.01em}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-5px;height:2px;width:100%;
+    background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.16,1,.3,1)}
+  .nav-links a:not(.btn):hover::after{transform:scaleX(1)}
+  .nav .btn{padding:.5em 1.15em;font-size:.8rem}
+  @media(max-width:860px){.nav-links a:not(.btn){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(38px,6vw,86px) 0 0}
+  .hero .kick{max-width:30ch;margin-bottom:clamp(34px,6vw,110px)}
+  .hero .under{display:flex;align-items:flex-start;justify-content:space-between;gap:clamp(20px,4vw,60px);
+               flex-wrap:wrap-reverse;margin-top:clamp(30px,4.5vw,60px)}
+  .hero .under p{max-width:44ch;text-align:right;margin-left:auto}
+  @media(max-width:700px){.hero .under p{text-align:left;margin-left:0}}
+
+  /* bloc visuel + effet persiennes (placeholder d'image) */
+  .visual{position:relative;margin-top:clamp(34px,5vw,72px);aspect-ratio:16/6.2;overflow:hidden;
+          background:radial-gradient(120% 150% at 78% 8%,#242424 0%,#0d0d0d 42%,#000 100%)}
+  @media(max-width:700px){.visual{aspect-ratio:4/3}}
+  .visual .stamp{position:absolute;inset:auto auto 8% 5%;color:#fff;font-weight:800;font-stretch:88%;
+                 letter-spacing:-.05em;font-size:clamp(1.5rem,4.4vw,3.8rem);line-height:1.06;max-width:18ch}
+  .visual .stamp b{background:var(--lime);color:#000;padding:0 .1em;font-weight:800}
+  .visual .corner{position:absolute;top:0;right:0;background:var(--lime);color:#000;font-weight:700;
+                  font-size:clamp(.72rem,1vw,.85rem);padding:.7em 1.2em;letter-spacing:.02em}
+  .blind{position:absolute;left:0;right:0;background:var(--paper);height:0;transform:translateY(-50%);
+         transition:height .9s cubic-bezier(.16,1,.3,1) var(--bd,0ms)}
+  .js .visual.open .blind{height:var(--bh,10px)}
+
+  /* ---------- marquee ---------- */
+  .mq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;
+      padding:clamp(10px,1.4vw,18px) 0;margin-top:clamp(40px,6vw,90px)}
+  .mq-track{display:flex;width:max-content;animation:mq 38s linear infinite}
+  .mq:hover .mq-track{animation-play-state:paused}
+  .mq .it{font-size:clamp(1.3rem,3.4vw,2.9rem);font-weight:800;font-stretch:88%;letter-spacing:-.04em;
+          white-space:nowrap;display:flex;align-items:center}
+  .mq .it span{padding:0 .42em}
+  .mq .it i{font-style:normal;color:var(--gray);font-size:.6em;padding:0 .1em}
+  @keyframes mq{to{transform:translateX(-50%)}}
+
+  /* ---------- sections + tonalités pleine largeur (comme la référence) ---------- */
+  section{padding:var(--vspace) 0;background:var(--bg);color:var(--fg)}
+  .sec-head{margin-bottom:clamp(26px,3.6vw,48px)}
+  .tone-blue{--bg:var(--blue);--fg:#fff;--mut:rgba(255,255,255,.78);--rule:rgba(255,255,255,.32)}
+  .tone-lime{--bg:var(--lime);--fg:#000;--mut:rgba(0,0,0,.62);--rule:rgba(0,0,0,.24)}
+  .tone-pink{--bg:var(--pink);--fg:#000;--mut:rgba(0,0,0,.62);--rule:rgba(0,0,0,.24)}
+  .tone-dark{--bg:var(--ink);--fg:#fff;--mut:#c8c8c8;--rule:rgba(255,255,255,.28)}
+  .tone-blue .label,.tone-dark .label{color:var(--mut)}
+  .tone-lime .label,.tone-pink .label{color:rgba(0,0,0,.55)}
+  .tone-blue p,.tone-dark p{color:var(--mut)}
+  .tone-lime p,.tone-pink p{color:rgba(0,0,0,.72)}
+  .tone-blue .btn,.tone-dark .btn{color:#fff;border-color:#fff}
+  .tone-blue .btn:hover,.tone-dark .btn:hover{background:var(--lime);color:#000;border-color:var(--lime)}
+  .tone-lime .btn,.tone-pink .btn{color:#000;border-color:#000}
+  .tone-lime .btn:hover,.tone-pink .btn:hover{background:#000;color:var(--bg);border-color:#000}
+
+  /* ---------- section noire + bloc blanc superposé ---------- */
+  .dark{background:var(--ink);color:var(--paper)}
+  .dark .label{color:var(--gray-d)}
+  .dark p{color:#c8c8c8}
+  .stage{position:relative;margin-top:clamp(26px,4vw,54px)}
+  .stage h2 em{font-style:normal;background:var(--lime);color:#000;padding:0 .11em}
+  .overlay{background:var(--paper);color:var(--ink);padding:clamp(20px,2.6vw,34px);
+           margin-top:clamp(26px,3.6vw,44px);max-width:min(560px,100%);margin-left:auto;text-align:right}
+  .overlay p{color:var(--ink);font-weight:600;font-size:clamp(1rem,1.5vw,1.35rem);line-height:1.2;letter-spacing:-.02em}
+  .overlay .n{font-family:var(--cond);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+              color:var(--gray);display:block;margin-bottom:.7em}
+
+  /* ---------- résultats ---------- */
+  .res{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule)}
+  @media(max-width:999px){.res{grid-template-columns:1fr}}
+  .res>div{padding:clamp(22px,2.6vw,36px) clamp(16px,1.8vw,28px) clamp(26px,3vw,40px) 0;
+           border-bottom:1px solid var(--rule)}
+  .res>div+div{border-left:1px solid var(--rule);padding-left:clamp(16px,1.8vw,28px)}
+  @media(max-width:999px){.res>div+div{border-left:0;padding-left:0}}
+  .fig{font-size:clamp(3.6rem,8.6vw,7rem);line-height:.82;letter-spacing:-.06em;font-stretch:88%;margin:.16em 0 .24em}
+  .res p{color:var(--mut);font-size:clamp(.9rem,1.05vw,1rem)}
+  .res b{color:var(--fg);font-weight:700}
+
+  /* ---------- dossiers ---------- */
+  .case{padding:clamp(26px,3vw,44px) 0;border-top:1px solid var(--rule)}
+  .case h3{margin:.55em 0 .5em}
+  .case p{color:var(--fg);opacity:.86;max-width:60ch}
+  .case .lim{margin-top:.9em;color:var(--mut);font-size:clamp(.84rem,.98vw,.93rem)}
+  .case .meta p{color:var(--mut)}
+
+  /* ---------- méthode ---------- */
+  .steps{border-top:1px solid var(--rule)}
+  .st{padding:clamp(20px,2.4vw,32px) 0;border-bottom:1px solid var(--rule)}
+  .st .n{font-family:var(--cond);font-size:.8rem;font-weight:600;color:var(--gray);letter-spacing:.08em;padding-top:.35em}
+  .st p{color:var(--mut);max-width:58ch}
+
+  /* ---------- équipe ---------- */
+  .who{border-top:1px solid var(--rule);padding:clamp(20px,2.4vw,30px) 0}
+  .who:last-of-type{border-bottom:1px solid var(--rule)}
+  .who h3{margin:.6em 0 .45em}
+  .who p{color:var(--mut)}
+
+  /* ---------- contact ---------- */
+  .contact .cols{display:flex;justify-content:space-between;align-items:flex-end;gap:clamp(24px,4vw,60px);
+                 flex-wrap:wrap;margin-top:clamp(28px,3.6vw,48px)}
+  .mail{font-size:clamp(1.15rem,3vw,2.6rem);font-weight:800;letter-spacing:-.05em;font-stretch:90%;
+        border-bottom:2px solid currentColor;padding-bottom:.05em;color:#fff}
+  .mail:hover{color:var(--lime);border-color:var(--lime)}
+
+  /* ---------- footer + wordmark ---------- */
+  footer{border-top:1px solid var(--line);padding-top:clamp(22px,2.6vw,32px);overflow:hidden}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem;color:var(--gray);
+        padding-bottom:clamp(24px,3vw,40px)}
+  .wordmark{font-weight:800;font-stretch:75%;letter-spacing:-.055em;line-height:.78;
+            font-size:clamp(3.4rem,15.5vw,15rem);white-space:nowrap;padding-bottom:.04em;
+            display:block;text-align:center}
+
+  /* ---------- animations ---------- */
+  .ch{display:inline-block;transform:translateY(105%);opacity:0}
+  .js .ln{overflow:hidden;display:block}
+  .js .ln.go .ch{transform:none;opacity:1;
+    transition:transform .95s cubic-bezier(.16,1,.3,1) var(--cd,0ms),opacity .6s ease var(--cd,0ms)}
+  .r{opacity:0;transform:translateY(20px)}
+  .js .r{transition:opacity .8s cubic-bezier(.16,1,.3,1) var(--d,0ms),transform .8s cubic-bezier(.16,1,.3,1) var(--d,0ms)}
+  .js .r.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .r,.ch{opacity:1!important;transform:none!important}
+    .mq-track{animation:none}
+    .js .visual .blind{height:var(--bh,10px)}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">DEJAVU DIGITAL<sup>LTD</sup></a>
+    <nav class="nav-links">
+      <a href="#perimetre">périmètre</a>
+      <a href="#resultats">résultats</a>
+      <a href="#dossiers">dossiers</a>
+      <a href="#studio">équipe</a>
+      <a href="#contact" class="btn">diagnostic
+        <svg viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M1 12L12 1M12 1H1M12 1V12" stroke="currentColor" stroke-width="2"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero wrap g12">
+    <div class="inner">
+      <p class="lead kick r">Il n'y a jamais eu autant de publicité sur Instagram. La plupart ne produit rien.</p>
+      <h1 data-split>Nous transformons<br>un budget Meta<br>en rendez-vous.</h1>
+      <div class="under">
+        <a href="#contact" class="btn fill r" style="--d:340ms">le diagnostic
+          <svg viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M1 12L12 1M12 1H1M12 1V12" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+        <p class="r" style="--d:400ms">Agence Meta Ads à Bruxelles. Un media buyer dans votre compte tous les jours, un directeur créatif quand la campagne en a besoin — et des chiffres que nous allons chercher chez vous, pas dans le tableau de bord de la plateforme.</p>
+      </div>
+
+      <div class="visual" aria-hidden="true">
+        <span class="corner">Bruxelles · depuis 2026</span>
+        <span class="blind" style="top:11%;--bh:2px;--bd:120ms"></span>
+        <span class="blind" style="top:21%;--bh:3px;--bd:260ms"></span>
+        <span class="blind" style="top:33%;--bh:2px;--bd:400ms"></span>
+        <span class="stamp">Le budget part.<br><b>Le rendez-vous</b> arrive.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="mq" aria-hidden="true">
+    <div class="mq-track">
+      <div class="it"><span>wellness</span><i>◆</i><span>événementiel</span><i>◆</i><span>santé</span><i>◆</i><span>horeca</span><i>◆</i><span>retail</span><i>◆</i><span>services</span><i>◆</i><span>b2b</span><i>◆</i></div>
+      <div class="it"><span>wellness</span><i>◆</i><span>événementiel</span><i>◆</i><span>santé</span><i>◆</i><span>horeca</span><i>◆</i><span>retail</span><i>◆</i><span>services</span><i>◆</i><span>b2b</span><i>◆</i></div>
+    </div>
+  </div>
+
+  <!-- PÉRIMÈTRE -->
+  <section class="wrap g12 tone-blue" id="perimetre">
+    <div class="inner sub12">
+      <p class="label col-l r" style="grid-column:1/-1;margin-bottom:clamp(22px,3vw,40px)">ce que nous faisons</p>
+      <div class="col-l">
+        <h2 data-split>Instagram<br>et Facebook.<br>Rien d'autre.</h2>
+      </div>
+      <div class="col-r r" style="--d:140ms">
+        <p class="lead" style="margin-bottom:1.1em">Un périmètre étroit, assumé. En 2026 l'achat média Meta est largement automatisé : ce qui fait la différence, ce n'est plus le réglage, c'est la vidéo qu'on y met — et la vitesse à laquelle on la remplace.</p>
+        <p style="color:var(--gray)">Nous pilotons la structure de campagne, les audiences et les budgets au jour le jour. Nous produisons les vidéos quand il en manque, nous partons des vôtres quand elles existent. Et nous branchons la mesure jusqu'à ce qu'elle compte juste.</p>
+        <div style="margin-top:1.5em;display:flex;gap:8px;flex-wrap:wrap">
+          <span class="tag t-lime">media buying</span>
+          <span class="tag t-pink">création vidéo</span>
+          <span class="tag t-blue">mesure &amp; suivi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTE NOIR -->
+  <section class="dark tone-dark">
+    <div class="wrap g12">
+      <div class="inner">
+        <p class="label sec-head r">notre règle</p>
+        <div class="stage">
+          <h2 data-split>Nous comptons ce qui<br>arrive <em>chez le client</em>.</h2>
+          <div class="overlay r" style="--d:200ms">
+            <span class="n">ce que nous relevons</span>
+            <p>Des rendez-vous dans un agenda.<br>Des entrées scannées à la porte.<br>Pas un tableau de bord qui note sa propre copie.</p>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:clamp(30px,4vw,52px)">
+          <p class="r" style="--d:260ms;max-width:44ch">Une régie publicitaire qui s'auto-évalue, ce n'est pas une preuve. Nous allons chercher le chiffre là où il se produit : dans vos outils.</p>
+          <a href="#resultats" class="btn inv r" style="--d:300ms">les résultats
+            <svg viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M1 12L12 1M12 1H1M12 1V12" stroke="currentColor" stroke-width="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉSULTATS -->
+  <section class="wrap g12 tone-lime" id="resultats">
+    <div class="inner">
+      <p class="label sec-head r">résultats mesurés · 2026</p>
+      <div class="res">
+        <div class="r">
+          <span class="tag t-lime">wellness</span>
+          <div class="fig">×6</div>
+          <p><b>Le rythme de prise de rendez-vous</b> multiplié par six, relevé dans l'agenda du client — pas dans le gestionnaire de publicités.</p>
+        </div>
+        <div class="r" style="--d:120ms">
+          <span class="tag t-pink">événementiel</span>
+          <div class="fig">85 %</div>
+          <p><b>Des acheteurs se sont présentés à la porte</b>, sur deux éditions consécutives, comptés au scanner d'entrée.</p>
+        </div>
+        <div class="r" style="--d:240ms">
+          <span class="tag t-blue">tous comptes</span>
+          <div class="fig">+79 %</div>
+          <p><b>C'est ce que coûte une vidéo laissée en ligne 14 jours de plus</b>, à visuel identique. La créa s'use : c'est mesuré, et c'est pour ça qu'on la renouvelle.</p>
+        </div>
+      </div>
+      <p class="small r" style="margin-top:clamp(18px,2.2vw,30px);max-width:72ch">Chiffres relevés dans les comptes que nous pilotons et dans les outils de nos clients, sur les périodes indiquées. Ils se lisent contre l'historique du compte concerné, pas contre une moyenne de marché. Aucun client n'est nommé sans accord écrit.</p>
+    </div>
+  </section>
+
+  <!-- DOSSIERS -->
+  <section class="wrap g12" id="dossiers" style="padding-top:0">
+    <div class="inner">
+      <p class="label sec-head r">dossiers</p>
+
+      <article class="case sub12 r">
+        <div class="col-m meta">
+          <span class="tag t-lime">wellness</span>
+          <p class="small" style="margin-top:.9em">Club premium · Bruxelles<br>pré-ouverture · 2026</p>
+        </div>
+        <div class="col-b">
+          <h3>Remplir un agenda,<br>pas collectionner des likes.</h3>
+          <p>Un club qui ouvrait ses portes et devait remplir des visites. Nous avions fixé avec lui un objectif de coût par rendez-vous avant de lancer : le coût réel est ressorti <b>au moins huit fois sous cet objectif</b>, et le carnet s'est rempli plusieurs semaines à l'avance — au point que nous avons proposé de réduire le budget. Le levier : une première campagne construit une audience locale qualifiée, qui sert ensuite de vivier de retargeting, où <b>un rendez-vous coûte environ 38 % de moins</b> qu'en audience froide.</p>
+          <p class="lim">Honnêtement : deux concepts créatifs sur cinq ont été écartés après test, et un mois de rodage a été nécessaire.</p>
+        </div>
+      </article>
+
+      <article class="case sub12 r">
+        <div class="col-m meta">
+          <span class="tag t-pink">événementiel</span>
+          <p class="small" style="margin-top:.9em">Soirée récurrente · Bruxelles<br>deux éditions · 2026</p>
+        </div>
+        <div class="col-b">
+          <h3>Quinze fois plus de préventes<br>que les éditions précédentes.</h3>
+          <p>Une soirée qui vivait presque uniquement de la porte. Cinq campagnes orchestrées du premier contact au jour J, mesure posée sur la billetterie, garde-fous de dépense automatisés, extinction programmée à minuit sans un geste humain. Résultat : <b>quinze fois plus de préventes</b> que sur les éditions précédentes du même organisateur, une portée deux à trois fois supérieure à son record — et <b>85 % des acheteurs présents à la porte</b>, vérifiés au scanner.</p>
+          <p class="lim">Honnêtement : l'essentiel du volume reste vendu à la porte. La publicité a nourri la demande, elle ne l'a pas remplacée.</p>
+        </div>
+      </article>
+
+      <article class="case sub12 r">
+        <div class="col-m meta">
+          <span class="tag t-blue">avant de signer</span>
+          <p class="small" style="margin-top:.9em">Cinq dossiers étudiés<br>2026</p>
+        </div>
+        <div class="col-b">
+          <h3>Deux fois, notre réponse<br>a été « pas maintenant ».</h3>
+          <p>Nous ne prenons pas un dossier sans l'avoir étudié : l'activité, le marché, la concurrence — et le compte publicitaire quand il existe. Nous y avons trouvé un pixel qui ne remontait plus rien, des audiences non conformes, un budget entier dépensé <b>sans produire un seul contact</b>. Et deux fois sur cinq, nous avons déconseillé d'engager un budget média : le moment n'était pas le bon.</p>
+          <p class="lim">Un diagnostic qui se termine par « pas maintenant » coûte moins cher qu'un trimestre de campagnes qui ne pouvaient pas fonctionner.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MÉTHODE -->
+  <section class="wrap g12">
+    <div class="inner">
+      <p class="label sec-head r">comment on travaille</p>
+      <div class="steps">
+        <div class="st sub12 r"><span class="n col-n">01</span><div class="col-t"><h3>On commence par regarder</h3></div><div class="col-d"><p>Avant toute proposition : votre activité, votre marché, vos concurrents — et votre compte publicitaire si vous en avez un. Le diagnostic est écrit et il vous reste, que nous travaillions ensemble ou non.</p></div></div>
+        <div class="st sub12 r"><span class="n col-n">02</span><div class="col-t"><h3>Le goulot, c'est la créa</h3></div><div class="col-d"><p>Une même vidéo coûte 79 % plus cher après quatorze jours de diffusion. Nous produisons de nouveaux concepts par cycles, nous les testons les uns contre les autres, et nous écartons sans état d'âme ceux qui ne prennent pas.</p></div></div>
+        <div class="st sub12 r"><span class="n col-n">03</span><div class="col-t"><h3>Vous validez chaque euro</h3></div><div class="col-d"><p>Nous lisons les performances, nous proposons un geste chiffré, vous dites oui, nous exécutons. Nous pilotons vos publicités — nous ne publions jamais à votre place.</p></div></div>
+        <div class="st sub12 r"><span class="n col-n">04</span><div class="col-t"><h3>On mesure hors plateforme</h3></div><div class="col-d"><p>Agenda, billetterie, scanner d'entrée, CRM : la vérité est là. Sur un compte repris, nous sommes passés de trois réservations détectées sur dix à la totalité — même publicité, mais un algorithme qui apprend enfin sur du vrai.</p></div></div>
+        <div class="st sub12 r"><span class="n col-n">05</span><div class="col-t"><h3>On lève le pied quand il le faut</h3></div><div class="col-d"><p>Quand les créneaux d'un client se sont remplis plus vite que sa capacité, nous avons proposé de réduire le budget. Une agence payée pour dépenser vous dira rarement de dépenser moins.</p></div></div>
+        <div class="st sub12 r"><span class="n col-n">06</span><div class="col-t"><h3>Tout vous appartient</h3></div><div class="col-d"><p>Compte publicitaire, page, pixel et API Conversions, audiences, et l'intégralité des vidéos produites : à votre nom, sur vos accès. Si nous nous arrêtons, vous ne repartez pas de zéro.</p></div></div>
+      </div>
+      <p class="small r" style="margin-top:clamp(20px,2.4vw,32px)">Forfait mensuel — aucun pourcentage sur votre budget média, qui part de votre moyen de paiement. Un petit nombre de comptes pilotés à la fois : c'est notre capacité réelle, pas un argument de rareté.</p>
+    </div>
+  </section>
+
+  <!-- ÉQUIPE -->
+  <section class="wrap g12 tone-pink" id="studio">
+    <div class="inner sub12">
+      <p class="label" style="grid-column:1/-1;margin-bottom:clamp(22px,3vw,40px)">l'équipe</p>
+      <div class="col-l r">
+        <h2 data-split>Deux personnes.<br>Pas un centre<br>d'appel.</h2>
+      </div>
+      <div class="col-r">
+        <div class="who r" style="--d:120ms">
+          <span class="tag t-lime">média &amp; opérations</span>
+          <h3>Dans votre compte tous les jours</h3>
+          <p>Structure des campagnes, audiences, budgets, arbitrages chiffrés — avec une couche d'outillage maison qui automatise l'analyse, jamais la décision.</p>
+        </div>
+        <div class="who r" style="--d:200ms">
+          <span class="tag t-pink">direction créative</span>
+          <h3>Dix ans de réalisation</h3>
+          <p>Concepts, tournage, montage — selon ce dont la campagne a besoin. Nous exploitons d'abord ce que vous avez ; ce qui manque est produit ici, pour la campagne qu'il doit servir. Nous travaillons notamment avec le collectif LAPREMICE.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="dark tone-dark contact" id="contact">
+    <div class="wrap g12">
+      <div class="inner">
+        <p class="label sec-head r">contact</p>
+        <h2 data-split>Ne restez pas<br>dans le bruit.</h2>
+        <div class="cols">
+          <div class="r" style="--d:160ms">
+            <p style="max-width:46ch;margin-bottom:1.3em">Écrivez-nous : nous regardons votre activité et, si vous diffusez déjà, votre compte. Vous recevez un diagnostic écrit. Sans engagement, sans accès à vos comptes à ce stade — réponse sous 24 h ouvrées.</p>
+            <a class="mail" href="mailto:contact@dejavudigital.be?subject=Demande%20de%20diagnostic">contact@dejavudigital.be</a>
+          </div>
+          <a href="mailto:contact@dejavudigital.be?subject=Demande%20de%20diagnostic" class="btn inv r" style="--d:220ms">recevoir le diagnostic
+            <svg viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M1 12L12 1M12 1H1M12 1V12" stroke="currentColor" stroke-width="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>© 2026 DEJAVU DIGITAL LTD — Companies House n° 14175430 (UK) · activité opérée depuis Bruxelles</div>
+      <div>Résultats mesurés dans les comptes que nous pilotons — ni moyenne, ni promesse de performance.</div>
+    </div>
+  </div>
+  <span class="wordmark" aria-hidden="true">DEJAVU DIGITAL</span>
+</footer>
+
+<script>
+(function(){
+  var d=document,w=window;
+  if(w.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    d.documentElement.classList.add('js');
+    var v0=d.querySelector('.visual'); if(v0)v0.classList.add('open');
+    return;
+  }
+  d.documentElement.classList.add('js');
+
+  /* --- découpe des titres en lignes + caractères (façon Splitting) --- */
+  function split(el){
+    var lines=el.innerHTML.split(/<br\s*\/?>/i);
+    el.innerHTML='';
+    lines.forEach(function(html,li){
+      var ln=d.createElement('span'); ln.className='ln';
+      var tmp=d.createElement('span'); tmp.innerHTML=html;
+      var i=0;
+      (function walk(src,dst){
+        [].slice.call(src.childNodes).forEach(function(n){
+          if(n.nodeType===3){
+            n.textContent.split('').forEach(function(c){
+              var s=d.createElement('span'); s.className='ch';
+              s.style.setProperty('--cd',(li*90+i*14)+'ms');
+              s.textContent=c===' '?' ':c; i++; dst.appendChild(s);
+            });
+          }else{
+            var cl=n.cloneNode(false); dst.appendChild(cl); walk(n,cl);
+          }
+        });
+      })(tmp,ln);
+      el.appendChild(ln);
+    });
+  }
+  var heads=[].slice.call(d.querySelectorAll('[data-split]'));
+  heads.forEach(split);
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      io.unobserve(e.target);
+      if(e.target.hasAttribute('data-split')){
+        [].slice.call(e.target.querySelectorAll('.ln')).forEach(function(l){l.classList.add('go');});
+      }else{ e.target.classList.add('in'); }
+    });
+  },{threshold:.15,rootMargin:'0px 0px -5% 0px'});
+
+  heads.forEach(function(h){io.observe(h);});
+  [].slice.call(d.querySelectorAll('.r')).forEach(function(el){io.observe(el);});
+
+  /* --- persiennes du visuel --- */
+  var vis=d.querySelector('.visual');
+  if(vis){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('open'); } });
+    },{threshold:.25}).observe(vis);
+  }
+})();
+</script>
+</body>
+</html>
