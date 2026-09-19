@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DEJAVU DIGITAL — Agence Meta Ads &amp; Google Ads à Bruxelles</title>
+<meta name="description" content="Agence Meta Ads et Google Ads à Bruxelles. L'annonce, la page de réservation et la mesure dans les mêmes mains : nous comptons ce qui arrive chez vous.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dejavudigital.be/">
+<meta property="og:title" content="DEJAVU DIGITAL — Meta Ads, Google Ads et pages de réservation">
+<meta property="og:description" content="Agence Meta Ads et Google Ads à Bruxelles. L'annonce, la page de réservation et la mesure dans les mêmes mains : nous comptons ce qui arrive chez vous.">
+<meta property="og:image" content="https://dejavudigital.be/img/partage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://dejavudigital.be/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,500;0,600;1,500&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#050505; --paper:#fff; --yellow:#fef073; --blue:#5a92e7; --green:#69b16a; --pink:#ecc8eb; --cream:#f7f7f1;
+    --gut:1.3125rem;
+    --disp:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --text:"Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+    /* échelle typographique : SIX tailles, pas une de plus (retour du 19/09 : « trop de tailles différentes ») */
+    --fs-xl:clamp(4.1rem,calc(10.3vw + 1.5rem),9.25rem); /* titre du hero */
+    --fs-l:clamp(2.85rem,5.3vw,4.75rem);                 /* grands titres, manifeste */
+    --fs-m:clamp(1.8rem,2.92vw,2.625rem);                /* phrases fortes */
+    --fs-s:clamp(1.3rem,1.95vw,1.75rem);                 /* sous-titres, titres de cartes, lignes d'expertise */
+    --fs-b:clamp(1.05rem,1.39vw,1.25rem);                /* texte courant */
+    --fs-t:.94rem;                                       /* étiquettes, boutons, mentions */
+    --pad:clamp(4.57rem,6.7vw,6rem); --pad-lg:clamp(5.6rem,8.9vw,8rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
+  body{font-family:var(--text);font-weight:500;background:var(--paper);color:var(--ink);line-height:1.2;
+       -webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip;font-synthesis:none;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  ::selection{background:var(--yellow);color:var(--ink)}
+  :focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+  /* ---------- typographie ---------- */
+  .d1,.d2,.ld p{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:-.02em;line-height:.82}
+  .d1{font-size:var(--fs-xl)}
+  .d2{font-size:var(--fs-l);letter-spacing:-.01em}
+  @media(max-width:600px){:root{--fs-l:clamp(1.8rem,9.4vw,2.85rem)}}
+  h1,h2,h3,p{overflow-wrap:break-word}
+  .d3{font-family:var(--disp);font-weight:600;font-size:var(--fs-l);line-height:.98;letter-spacing:-.02em}
+  .st{font-size:var(--fs-m);line-height:1.05;letter-spacing:-.025em;font-weight:500}
+  .sub{font-size:var(--fs-s);line-height:1.04;letter-spacing:-.01em;font-weight:500}
+  p{font-size:var(--fs-b);line-height:1.2;letter-spacing:-.01em}
+  .lab{font-size:var(--fs-t);line-height:1.2;text-transform:uppercase;letter-spacing:-.01em}
+  .lab2{font-size:var(--fs-t);line-height:1.2;text-transform:uppercase;letter-spacing:-.01em;text-align:center;font-weight:500}
+  .fine{font-size:var(--fs-t);line-height:1.3;letter-spacing:0;opacity:.72}
+  .dot::before{content:"";display:inline-block;width:.65rem;height:.65rem;border-radius:50%;background:var(--blue);margin-right:.6rem;vertical-align:.02em}
+  u{text-decoration:underline;text-decoration-thickness:.06em;text-underline-offset:.1em}
+
+  /* ---------- boutons pilule à ombre dure ---------- */
+  .btn{display:inline-flex;align-items:center;gap:.55em;border:1.6px solid var(--ink);box-shadow:0 3.75px 0 var(--ink);
+       border-radius:800px;background:var(--paper);color:var(--ink);padding:1rem 1.75rem;white-space:nowrap;
+       font:500 var(--fs-t)/1.4 var(--text);text-transform:uppercase;letter-spacing:-.015em;
+       transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
+  .btn:hover{transform:translateY(2.25px);box-shadow:0 1.5px 0 var(--ink)}
+  .btn.y{background:var(--yellow)}
+  .btn.sm{padding:.625rem 1rem}
+  @media(max-width:600px){.btn{padding:.78rem 1.15rem}.btn.sm{padding:.6rem .95rem}}
+  .btn.ghost{background:transparent;color:#fff;border-color:#fff;box-shadow:0 3.75px 0 #fff}
+  .btn.ghost:hover{box-shadow:0 1.5px 0 #fff}
+  .roll{display:inline-block;overflow:hidden;height:1.4em;line-height:1.4}
+  .roll>span{display:inline-block;white-space:pre;text-shadow:0 1.4em 0 currentColor;
+             transition:transform .5s var(--ease) calc(var(--i,0)*13ms)}
+  .btn:hover .roll>span{transform:translateY(-1.4em)}
+
+  /* ---------- écran d'ouverture (CSS seul : il part même sans JavaScript) ---------- */
+  /* PAS d'écran d'ouverture (retiré le 19/09/2026 : un site qui fait attendre plusieurs secondes fait fuir).
+     Le hero est visible tout de suite ; son arrivée est courte et ne bloque rien. --t0 = départ de cette arrivée. */
+  :root{--t0:0s}
+  @keyframes up{from{transform:translateY(110%)}to{transform:none}}
+
+  /* ---------- navigation ---------- */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:flex-end;align-items:center;min-height:4.3rem;
+       padding:.85rem var(--gut);pointer-events:none;transition:transform .5s var(--ease)}
+  .nav>*{pointer-events:auto}
+  .logo{position:fixed;top:.85rem;left:var(--gut);z-index:51;display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;color:#fff;mix-blend-mode:difference}
+  .logo-t{font-family:var(--disp);font-weight:600;font-size:var(--fs-t);line-height:1;letter-spacing:-.01em;text-transform:uppercase;white-space:nowrap}
+  @media(max-width:350px){.logo-t{display:none}} /* sur les plus petits écrans le nom toucherait la pastille Contact */
+  .logo svg{width:2.9rem;height:2.1rem;fill:currentColor}
+  .pills{display:flex;align-items:center;gap:.25rem}
+  .pills .btn.y{margin-left:1.6rem}
+  .pills .m-only{display:none}
+  .nav.away .pills .d-only{transform:translateY(-260%)}
+  .pills .d-only{transition:transform .5s var(--ease),box-shadow .25s var(--ease)}
+  .go .pills .btn,.go .logo{animation:drop .9s cubic-bezier(.34,1.56,.64,1) backwards;animation-delay:calc(var(--t0) + .35s + var(--k,0)*60ms)}
+  @keyframes drop{from{transform:translateY(-220%)}to{transform:none}}
+  @media(max-width:900px){
+    .pills .d-only{display:none}
+    .pills .m-only{display:inline-flex}
+    .pills .btn.y{margin-left:0;margin-right:.35rem}
+  }
+  /* Menu mobile. Trois pièges évités (bug remonté le 19/09 : « on ne sait pas défiler pour voir le menu ») :
+     1. hauteur = écran RÉELLEMENT visible (100dvh) — « inset:0 » prend la grande hauteur, sans la barre du navigateur,
+        et les derniers liens passent dessous ;
+     2. le panneau DÉFILE (overflow-y:auto) ;
+     3. pas de justify-content:flex-end : ce qui déborde par le haut devient inatteignable. On cale en bas avec
+        margin-top:auto sur le premier lien, qui s'efface tout seul quand la place manque. */
+  .menu{position:fixed;top:0;left:0;right:0;height:100vh;height:100dvh;z-index:90;background:var(--yellow);display:none;
+        flex-direction:column;justify-content:flex-start;gap:.2rem;overflow-y:auto;overscroll-behavior:contain;
+        -webkit-overflow-scrolling:touch;
+        padding:4.6rem var(--gut) calc(var(--gut) + env(safe-area-inset-bottom,0px))}
+  .menu .close + a.big{margin-top:auto}   /* le 1er grand lien suit le bouton « Fermer » (:first-of-type visait « Fermer ») */
+  html:has(.menu:target){overflow:hidden}   /* la page derrière ne défile pas pendant que le menu est ouvert */
+  @media(max-width:900px){.menu:target{display:flex}}
+  .menu a.big{font-family:var(--disp);font-weight:600;text-transform:uppercase;font-size:clamp(2rem,min(11vw,9.5vh),5rem);line-height:.92;letter-spacing:-.02em;flex:0 0 auto}
+  .menu .close{position:absolute;top:.85rem;right:var(--gut)}
+  .menu .mail{margin-top:1.6rem;flex:0 0 auto;font-size:var(--fs-b);text-decoration:underline;text-underline-offset:.15em}
+
+  /* ---------- hero : diaporama plein écran + titre géant centré ---------- */
+  .hero{position:relative;height:105vh;height:105svh;min-height:34rem;display:grid;place-items:center;text-align:center;
+        color:#fff;overflow:hidden;background:#17120e}
+  .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .slides{position:absolute;inset:-12% 0}
+  .go .slides img{animation:settle 2.2s cubic-bezier(.16,1,.3,1) var(--t0) backwards}
+  @keyframes settle{from{transform:scale(1.12)}to{transform:none}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(5,5,5,.44),rgba(5,5,5,.58))}
+  .hero-in{position:relative;z-index:2;padding:0 var(--gut);display:flex;flex-direction:column;align-items:center}
+  .hero h1{position:relative;display:inline-block}
+  .hero h1 .l{display:block;overflow:hidden;padding-top:.2em;margin-top:-.2em}
+  .hero h1 .l>span{display:inline-block}
+  .go .hero h1 .l>span{animation:up 1.1s var(--ease) calc(var(--t0) + .1s) backwards}
+  .go .hero h1 .l:nth-child(2)>span{animation-delay:calc(var(--t0) + .2s)}
+  .hero .ag{position:absolute;left:100%;top:54%;margin-left:.5em;font-family:var(--text);text-transform:none;white-space:nowrap;
+            }
+  .go .hero .ag{animation:fade .9s var(--ease) calc(var(--t0) + .6s) backwards}
+  .hero .sub{max-width:26em;margin-top:1.1rem;line-height:1.02}
+  .go .hero .sub{animation:fade .9s var(--ease) calc(var(--t0) + .45s) backwards}
+  .hero .btn{margin-top:2.4rem}
+  .go .hero .btn{animation:fade .9s var(--ease) calc(var(--t0) + .55s) backwards}
+  .cta-note{font-size:var(--fs-b);line-height:1.2;max-width:24em;margin-top:1.1rem}
+  .cta-note em{font-style:italic}
+  .go .hero .cta-note{animation:fade .9s var(--ease) calc(var(--t0) + .65s) backwards}
+  .pre .cta-note{margin-top:1.4rem}
+  @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .hero h1 .l3{display:none}
+  .go .hero h1 .l3>span{animation-delay:calc(var(--t0) + .3s)}
+  @media(max-width:900px){
+    .hero .ag{display:none}
+    .hero h1 .l3{display:block}
+  }
+
+  /* ---------- sections ---------- */
+  main{position:relative;z-index:2;background:var(--paper)}
+  .sec{padding:var(--pad) var(--gut)}
+  .sec.lg{padding-top:var(--pad-lg);padding-bottom:var(--pad-lg)}
+  .center{text-align:center;display:flex;flex-direction:column;align-items:center}
+
+  /* nos terrains */
+  .marks{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.6rem clamp(2rem,5.5vw,5rem);margin-top:3.2rem}
+  .marks span{font-size:var(--fs-s);line-height:1;white-space:nowrap}
+  .mk1{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:-.04em}
+  .mk2{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+  .mk3{font-family:var(--disp);font-weight:500;text-transform:uppercase;letter-spacing:.12em}
+  .mk4{font-weight:600;letter-spacing:-.04em;text-transform:lowercase}
+
+  /* mots qui tournent */
+  .flipper{padding-top:4.5rem;padding-bottom:4.5rem}
+  .fl{display:block;overflow:hidden;height:1em;line-height:1;margin-top:-.17em}
+  .fl:first-child{margin-top:0}
+  .fl>span{display:block;position:relative;animation:flip 9s cubic-bezier(.76,0,.24,1) infinite;animation-delay:calc(var(--n)*.16s + 2s)}
+  .fl>span::after{content:attr(data-t);position:absolute;left:0;right:0;top:100%}
+  .fl>span::before{content:attr(data-a);position:absolute;left:0;right:0;top:200%}
+  @keyframes flip{0%,34%{transform:none}44%,84%{transform:translateY(-100%)}94%,100%{transform:translateY(-200%)}}
+  .arrow{font-family:var(--disp);font-size:var(--fs-m);line-height:1;margin-top:1.1rem;position:relative;z-index:2}
+  .portrait{width:clamp(13rem,22.5vw,20.25rem);aspect-ratio:324/414;overflow:hidden;margin-top:-.9rem;background:var(--cream)}
+  .portrait{position:relative}
+  .portrait img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover}
+  .flipper p{max-width:34em;margin-top:1.5rem}
+  .flipper .btn{margin-top:1.75rem}
+
+  /* tête de section : étiquette à pastille + grande phrase en retrait */
+  .head{position:relative}
+  .head .lab{position:absolute;left:0;top:.35rem}
+  .head .sp{display:inline-block;width:31.5vw}
+  @media(max-width:900px){
+    .head .lab{position:static;margin-bottom:1.2rem}
+    .head .sp{display:none}
+  }
+
+  /* dossiers */
+  /* 12 colonnes (7 + 5, comme la référence : 58 % / 42 %). minmax(0,…) : le contenu ne peut jamais élargir la grille.
+     Sur téléphone : UNE colonne — surtout pas de colonnes multiples, leurs gouttières forcent une largeur minimale. */
+  .work{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(3rem,4.5vw,4.2rem) var(--gut);margin-top:clamp(2.5rem,5.2vw,4.8rem)}
+  .card{grid-column:span 5;position:relative;min-width:0}
+  .card.w{grid-column:span 7}
+  @media(max-width:900px){
+    .work{grid-template-columns:minmax(0,1fr)}
+    .card,.card.w{grid-column:auto}
+  }
+  .card .vis{display:block;aspect-ratio:796/466;overflow:hidden;background:var(--cream)}
+  .card .vis{position:relative}
+  .card .vis img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover}
+  .card .vis{transition:transform 1.1s var(--ease)}
+  .card:hover .vis{transform:scale(.985)}
+  .card h3{margin-top:1rem}
+  .card .lab{margin-top:.4rem}
+  details>summary{cursor:pointer;list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  .card details{margin-top:.9rem}
+  .card summary{position:relative;display:inline-block;font-size:var(--fs-t);text-transform:uppercase;letter-spacing:-.01em;border-bottom:1.6px solid var(--ink);padding-bottom:.1em}
+  .card summary::before{content:"";position:absolute;inset:-.85rem -1rem}
+  .card summary::after{content:" (+)"}
+  .card details[open] summary::after{content:" (–)"}
+  .card details p{max-width:34em;margin-top:1rem;line-height:1.3}
+  .card details p.fine{margin-top:.8rem}
+  .cur{position:fixed;left:0;top:0;z-index:60;pointer-events:none;overflow:hidden;width:9.6rem;
+       background:var(--yellow);border:1.6px solid var(--ink);border-radius:800px;padding:.6rem 0;
+       font-size:var(--fs-t);text-transform:uppercase;white-space:nowrap}
+  .cur span{display:inline-block;padding-left:1rem;animation:curmq 5s linear infinite}
+  @keyframes curmq{to{transform:translateX(-50%)}}
+
+  /* manifeste */
+  .mani{position:relative;overflow:hidden}
+  .mani h2{max-width:17.2em;margin-top:4.5rem;position:relative;z-index:2}
+  .mani .btn{margin-top:4rem;position:relative;z-index:2}
+  .mani .lab2{position:relative;z-index:2}
+  .trail{position:absolute;z-index:1;width:clamp(8rem,12vw,11rem);aspect-ratio:4/5;object-fit:cover;pointer-events:none;will-change:transform}
+
+  /* résultats : trois grands chiffres séparés par des filets */
+  .figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;text-align:left;margin-top:clamp(2.6rem,4.4vw,4.2rem);
+        border-top:1.6px solid var(--ink);border-bottom:1.6px solid var(--ink)}
+  .fg{padding:1.5rem var(--gut) 2.2rem 0;min-width:0}
+  .fg+.fg{border-left:1.6px solid var(--ink);padding-left:var(--gut)}
+  .fig{font-family:var(--disp);font-weight:600;font-size:clamp(3.7rem,8.4vw,7.6rem);line-height:.86;letter-spacing:-.045em;
+       white-space:nowrap;margin:1.5rem 0 .7rem}
+  .figl{font-size:var(--fs-t);line-height:1.2;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:1.1rem}
+  .fg p:last-child{line-height:1.3;max-width:24em}
+  @media(max-width:900px){
+    .figs{grid-template-columns:minmax(0,1fr)}
+    .fg{padding-right:0}
+    .fg+.fg{border-left:0;padding-left:0;border-top:1.6px solid var(--ink)}
+  }
+  .res .fine{margin-top:2.4rem;max-width:52em;text-align:left;align-self:flex-start}
+
+  /* expertise */
+  .svc{display:grid;grid-template-columns:9.5rem minmax(0,1fr) clamp(9rem,12.3vw,11rem);gap:0 var(--gut);margin-top:clamp(2.8rem,4.2vw,3.8rem);align-items:start}
+  .svc .grp{display:contents}
+  .svc .cat{font-size:var(--fs-t);line-height:1.2;padding-top:.45rem;max-width:7.5rem}
+  .svc .items{padding-bottom:2.2rem}
+  .svc summary{font-size:var(--fs-s);line-height:1.1;letter-spacing:-.015em;padding:.28rem 0;display:inline-block}
+  .svc summary:hover,.svc details[open] summary{text-decoration:underline;text-decoration-thickness:.07em;text-underline-offset:.12em}
+  .svc details p{max-width:31em;margin:.5rem 0 1.1rem;line-height:1.3}
+  .svc .pic{grid-column:3;grid-row:1/span 3;aspect-ratio:176/220;overflow:hidden;background:var(--cream);position:sticky;top:6rem}
+  .svc .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s}
+  .svc .pic img.on{opacity:1}
+  @media(max-width:900px){
+    .svc{grid-template-columns:minmax(0,1fr)}
+    .svc .cat{padding:0 0 .5rem;max-width:none;opacity:.7}
+    .svc .pic{display:none}
+  }
+
+  /* méthode : cartes de couleur en défilement */
+  .meth{padding-left:0;padding-right:0;overflow:hidden}
+  .meth h2{padding:0 var(--gut)}
+  .rail{margin-top:4.6rem;overflow:hidden}
+  .track{display:flex;gap:1.25rem;width:max-content;padding:0 .625rem;animation:rail 80s linear infinite}
+  .rail:hover .track,.rail:focus-within .track{animation-play-state:paused}
+  @keyframes rail{to{transform:translateX(-50%)}}
+  .tc{width:min(28rem,84vw);min-height:31.6rem;padding:2rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:2rem;flex:0 0 auto}
+  .tc p{line-height:1.25}
+  .tc ul{list-style:none}
+  .tc li{font-size:var(--fs-b);line-height:1.25;padding:.55rem 0;border-top:1.6px solid var(--ink)}
+  .tc li:first-child{border-top:0;padding-top:0}
+  .tc .who{font-size:var(--fs-t);line-height:1.3;text-transform:uppercase;margin-top:.5rem}
+  @media(max-width:600px){.tc{width:18.4rem;min-height:24.2rem;padding:1.5rem 1.15rem}}
+  .c-green{background:var(--green)} .c-cream{background:var(--cream)} .c-yellow{background:var(--yellow)}
+  .c-pink{background:var(--pink)} .c-blue{background:var(--blue)}
+  @media(hover:none),(prefers-reduced-motion:reduce){
+    .rail{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+    .track{animation:none}
+    .tc{scroll-snap-align:center}
+    .tc[aria-hidden="true"]{display:none}
+  }
+
+  /* contact */
+  .pre{position:relative;min-height:39.4rem;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:#0d0d12;
+       padding:var(--pad) var(--gut)}
+  .pre>img{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover}
+  .pre::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(5,5,5,.55),rgba(5,5,5,.68))}
+  @media(max-width:900px){.pre::after{background:linear-gradient(rgba(5,5,5,.66),rgba(5,5,5,.8))}}
+  .pre-in{position:relative;z-index:2;max-width:41rem;display:flex;flex-direction:column;align-items:center}
+  .pre p{margin-top:1.25rem;max-width:31em}
+  .pre .row{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:2.25rem}
+
+  /* pied de page jaune, révélé sous le contenu */
+  footer{background:var(--yellow);position:relative;z-index:1;overflow:hidden}
+  .ft-in{padding:4rem var(--gut) 1.6rem}
+  .ft-dark{position:absolute;inset:0;background:var(--ink);opacity:0;pointer-events:none}
+  .ft{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,.8fr) minmax(0,.86fr);gap:2.5rem var(--gut);min-height:23rem}
+  @media(max-width:900px){.ft{grid-template-columns:minmax(0,1fr);min-height:0}}
+  .ft .brand{display:inline-block;position:relative;align-self:start;justify-self:start}
+  .ft .brand .ag{font-size:var(--fs-s);position:absolute;left:100%;bottom:.1em;margin-left:.5em;white-space:nowrap}
+  @media(max-width:900px){.ft .brand .ag{position:static;display:block;margin:.4rem 0 0}}
+  .ft nav a,.ft .co a,.ft .co span{display:block;font-size:var(--fs-b);line-height:1.35;text-transform:uppercase;padding:.28rem 0}
+  .ft .co a.m{text-transform:none;text-decoration:underline;text-underline-offset:.15em;margin-top:.6rem}
+  .ft a:hover{text-decoration:underline;text-underline-offset:.15em}
+  .legal{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1.66fr);gap:1rem var(--gut);margin-top:3rem;font-size:var(--fs-t);line-height:1.35;text-transform:uppercase}
+  @media(max-width:900px){.legal{grid-template-columns:minmax(0,1fr)}}
+
+  /* ---------- animations pilotées par GSAP : rien n'est caché tant que la bibliothèque n'a pas démarré ---------- */
+  html.lenis,html.lenis body{height:auto}
+  .lenis.lenis-smooth{scroll-behavior:auto!important}
+  .ln-mask{padding:.24em 0 .08em;margin:-.24em 0 -.08em}
+  /* le rail n'est repris par le script que sur souris/trackpad ; au doigt il reste un défilement natif */
+  .js-rail .track{animation:none;cursor:grab}
+  .js-rail .track:active{cursor:grabbing}
+  .js-rail .rail{overflow:hidden}
+  .cur{transform:translate(-50%,-50%) scale(0);opacity:1;transition:none}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .hero h1 .l>span,.hero .ag,.hero .sub,.hero .btn,.hero .cta-note,.fl>span,.slides img,.pills .btn,.logo{animation:none}
+  }
+</style>
+<script>/* l'arrivée du hero ne joue que si la page est réellement en train de s'afficher (voir la règle dans le CSS) */
+if(window.requestAnimationFrame&&!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(function(){document.documentElement.classList.add('go')});</script>
+</head>
+<body>
+
+<a class="logo" href="#top" aria-label="DEJAVU DIGITAL — haut de page">
+  <svg viewBox="0 0 46 32" aria-hidden="true"><path d="M2 2h9a14 14 0 0 1 0 28H2z"/><path d="M25 2h5a14 14 0 0 1 0 28h-5z"/></svg>
+  <span class="logo-t" aria-hidden="true">Dejavu Digital</span>
+</a>
+<header class="nav" id="nav">
+  <nav class="pills" aria-label="Navigation principale">
+    <a style="--k:1" class="btn sm d-only" href="#dossiers"><span class="roll"><span>Dossiers</span></span></a>
+    <a style="--k:2" class="btn sm d-only" href="#expertise"><span class="roll"><span>Expertise</span></span></a>
+    <a style="--k:3" class="btn sm d-only" href="#methode"><span class="roll"><span>Méthode</span></span></a>
+    <a style="--k:4" class="btn sm y" href="#contact"><span class="roll"><span>Contact</span></span></a>
+    <a style="--k:5" class="btn sm m-only" href="#menu"><span class="roll"><span>Menu</span></span></a>
+  </nav>
+</header>
+
+<!-- menu mobile : s'ouvre par :target, sans JavaScript -->
+<div class="menu" id="menu">
+  <a class="btn sm close" href="#top" data-close>Fermer</a>
+  <a class="big" href="#top">Accueil</a>
+  <a class="big" href="#dossiers">Dossiers</a>
+  <a class="big" href="#expertise">Expertise</a>
+  <a class="big" href="#methode">Méthode</a>
+  <a class="big" href="#contact">Contact</a>
+  <a class="mail" href="mailto:contact@dejavudigital.be?subject=R%C3%A9server%20un%20appel%20vid%C3%A9o&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20appel%20vid%C3%A9o.%0A%0AMon%20activit%C3%A9%20%3A%20%0AMes%20disponibilit%C3%A9s%20%3A%20%0AMon%20num%C3%A9ro%20%3A%20%0A">contact@dejavudigital.be</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="slides" aria-hidden="true">
+      <img src="img/hero-2.jpg" srcset="img/hero-2-900.jpg 900w, img/hero-2.jpg 1920w" sizes="100vw" alt="" fetchpriority="high">
+    </div>
+    <div class="hero-in">
+      <h1 class="d1"><span class="l"><span>Dejavu</span></span><span class="l"><span>Digital</span></span><span class="l l3"><span>Agence</span></span><span class="ag sub">(Agence)</span></h1>
+      <p class="sub">Nous construisons votre tunnel de vente : la publicité Meta, la publicité Google, et la page qui transforme le clic en réservation.</p>
+      <a class="btn" href="#contact"><span class="roll"><span>Réserver un appel vidéo</span></span></a>
+      <p class="cta-note"><em>Pour identifier vos besoins et des solutions actionnables, maintenant.</em></p>
+    </div>
+  </section>
+
+  <!-- NOS TERRAINS -->
+  <section class="sec">
+    <h2 class="lab2 r">Nos terrains</h2>
+    <div class="marks r" style="--d:120ms">
+      <span class="mk1">Meta Ads</span>
+      <span class="mk2">Google Ads</span>
+      <span class="mk3">Bien-être</span>
+      <span class="mk4">événementiel</span>
+      <span class="mk1">Transport premium</span>
+      <span class="mk2">Santé</span>
+      <span class="mk3">Pages de réservation</span>
+    </div>
+  </section>
+
+  <!-- TROIS MOTS -->
+  <section class="sec flipper center">
+    <h2 class="d2" aria-label="Attirer. Convertir. Mesurer.">
+      <span class="fl" aria-hidden="true"><span data-t="Meta + Google." data-a="Attirer." style="--n:0">Attirer.</span></span>
+      <span class="fl" aria-hidden="true"><span data-t="Votre page." data-a="Convertir." style="--n:1">Convertir.</span></span>
+      <span class="fl" aria-hidden="true"><span data-t="Le vrai chiffre." data-a="Mesurer." style="--n:2">Mesurer.</span></span>
+    </h2>
+    <div class="arrow" aria-hidden="true">(↓)</div>
+    <div class="portrait r"><img src="img/flip.jpg" alt="" loading="lazy"></div>
+    <p class="r">Pour les entreprises qui vivent de leurs réservations : rendez-vous, entrées, courses. Google touche les personnes qui vous cherchent déjà. Instagram et Facebook touchent celles qui ne vous cherchent pas encore, mais qui réservent quand elles voient votre offre. Nous choisissons selon vos clients — et nous nous occupons aussi de la page où ils arrivent.</p>
+    <a class="btn r" href="#expertise"><span class="roll"><span>Notre expertise</span></span></a>
+  </section>
+
+  <!-- DOSSIERS -->
+  <section class="sec" id="dossiers">
+    <div class="head">
+      <h2 class="lab dot">Dossiers</h2>
+      <p class="st" data-reveal><span class="sp" aria-hidden="true"></span>Quatre exemples de notre travail. Les résultats sont comptés chez le client — dans son agenda, à sa porte, sur son téléphone — pas dans les chiffres que la plateforme publicitaire affiche. Aucun client n'est nommé sans son accord.</p>
+    </div>
+
+    <div class="work">
+      <article class="card w r" data-cur="Lire le dossier">
+        <span class="vis"><img src="img/dossier-wellness.jpg" srcset="img/dossier-wellness-800.jpg 800w, img/dossier-wellness.jpg 1500w" sizes="(max-width:900px) 100vw, 58vw" alt="" loading="lazy"></span>
+        <h3 class="sub">Club bien-être premium</h3>
+        <p class="lab">Meta Ads · réservations par jour ×5 à 7 · Bruxelles, 2026</p>
+        <details>
+          <summary>Lire le dossier</summary>
+          <p>Un club haut de gamme qui devait remplir des visites. Nous avons compté les réservations là où elles arrivent : dans son agenda. Sur les six premières semaines de campagne, le rythme quotidien de réservations a été 5 à 7 fois plus élevé qu'avant le lancement. Sur la même période, la plateforme publicitaire n'en rattachait qu'environ une sur cinq à la campagne : piloter sur son seul compteur aurait fait juger la campagne très en dessous de ce qu'elle produisait.</p>
+          <p class="fine">Honnêtement : un avant/après mesure une hausse, pas la part exacte de la publicité. C'est pourquoi nous donnons une fourchette, jamais un chiffre unique.</p>
+        </details>
+      </article>
+
+      <article class="card r" style="--d:120ms" data-cur="Lire le dossier">
+        <span class="vis"><img src="img/dossier-soirees.jpg" srcset="img/dossier-soirees-800.jpg 800w, img/dossier-soirees.jpg 1500w" sizes="(max-width:900px) 100vw, 58vw" alt="" loading="lazy"></span>
+        <h3 class="sub">Soirées récurrentes</h3>
+        <p class="lab">Meta Ads · 85 % des billets payants scannés · été 2026</p>
+        <details>
+          <summary>Lire le dossier</summary>
+          <p>Des soirées qui vivaient surtout de la porte. Nous avons posé la mesure sur la billetterie et le scanner d'entrée, puis réglé la publicité sur ce qu'ils montraient. Plus de 8 billets payants sur 10 achetés en ligne ont été scannés à l'entrée, quand les invitations gratuites se présentaient moins d'une fois sur deux. La majorité des billets s'achète le jour même : le budget se concentre donc sur la veille et le jour J, et la publicité reste active la nuit tant que la billetterie est ouverte. Sur notre recommandation, la vente en ligne a été prolongée de deux heures un soir d'événement : la moitié des préventes de l'édition sont arrivées dans ce créneau.</p>
+          <p class="fine">Honnêtement : les ventes à la porte échappent à la billetterie en ligne. Nous ne les comptons pas dans nos chiffres.</p>
+        </details>
+      </article>
+
+      <article class="card r" data-cur="Lire le dossier">
+        <span class="vis"><img src="img/dossier-transport.jpg" srcset="img/dossier-transport-800.jpg 800w, img/dossier-transport.jpg 1500w" sizes="(max-width:900px) 100vw, 58vw" alt="" loading="lazy"></span>
+        <h3 class="sub">Transport de personnes premium</h3>
+        <p class="lab">Google Ads + page de réservation · deux comptes · septembre 2026</p>
+        <details>
+          <summary>Lire le dossier</summary>
+          <p>Deux entreprises de transport haut de gamme : une campagne Google Ads chacune, et la page où elle mène, construite ou refondue par nous — demande de course en quelques gestes sur téléphone, appel en un geste, une référence attachée à chaque demande pour la suivre jusqu'à la course. Premier chantier avant tout budget supplémentaire : la mesure. Sur un compte, Google n'a compté la première semaine qu'environ un contact sur trois ou quatre relevés par notre propre suivi, faute d'accord aux cookies. Sur l'autre, près de 9 contacts sur 10 venus des annonces remontent désormais dans Google Ads, cookies refusés par défaut — et un appel n'est compté comme une demande que s'il dure assez longtemps pour en être une, durée réglée sur les vrais appels de l'entreprise et non sur le réglage par défaut de Google.</p>
+          <p class="fine">Honnêtement : ces campagnes ont quelques semaines. Pas encore de chiffre de courses à publier — il le sera quand il couvrira une période qui a du sens.</p>
+        </details>
+      </article>
+
+      <article class="card w r" style="--d:120ms" data-cur="Lire le dossier">
+        <span class="vis"><img src="img/dossier-sante.jpg" srcset="img/dossier-sante-800.jpg 800w, img/dossier-sante.jpg 1500w" sizes="(max-width:900px) 100vw, 58vw" alt="" loading="lazy"></span>
+        <h3 class="sub">Centre de santé</h3>
+        <p class="lab">Meta Ads + Google Ads · proposition en cours · Bruxelles, 2026</p>
+        <details>
+          <summary>Lire le dossier</summary>
+          <p>Un centre de santé qui veut plus de rendez-vous. Ce que nous lui proposons, dans cet ordre : vérifier ce que ses outils comptent réellement comme rendez-vous — quand la prise de rendez-vous se fait ailleurs que sur le site, la plateforme ne la voit pas ; puis répartir les rôles, Google Ads pour les personnes qui cherchent déjà, Meta pour celles qui n'y pensent pas encore ; enfin, faire arriver chaque demande là où le centre la traite.</p>
+          <p class="fine">Pas de chiffre ici : rien n'est encore lancé. Ce dossier montre la méthode, pas un résultat.</p>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <!-- MANIFESTE -->
+  <section class="sec lg mani center" id="regle">
+    <p class="lab2 r">Nous comptons ce qui arrive (vraiment)</p>
+    <h2 class="d3" data-reveal>Des <u>rendez-vous</u> dans un agenda. Des <u>entrées scannées</u> à la porte. Des <u>appels</u> assez longs pour être une vraie demande. Pas les chiffres flatteurs d'un tableau de bord.</h2>
+    <a class="btn r" href="#resultats"><span class="roll"><span>Voir les résultats</span></span></a>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="sec" id="expertise">
+    <div class="head">
+      <h2 class="lab dot">Ce que nous faisons</h2>
+      <p class="st" data-reveal><span class="sp" aria-hidden="true"></span>Nous gérons vos publicités sur Google, Instagram et Facebook — et la page où vos clients arrivent après le clic. Parce qu'une bonne publicité qui mène à une page lente ou confuse, c'est de l'argent perdu.</p>
+    </div>
+
+    <div class="svc">
+      <div class="grp">
+        <p class="cat">Attirer</p>
+        <div class="items">
+          <details data-pic="0"><summary>(01) Meta Ads</summary>
+            <p>Instagram et Facebook, pour créer la demande là où elle n'existe pas encore. Structure de campagne, audiences et budgets pilotés au jour le jour.</p></details>
+          <details data-pic="1"><summary>(02) Google Ads</summary>
+            <p>Les recherches qui précèdent un achat — « taxi aéroport », « rendez-vous samedi ». Mots-clés, annonces et enchères réglés sur les demandes réelles, pas sur les clics.</p></details>
+        </div>
+      </div>
+      <div class="grp">
+        <p class="cat">Convertir</p>
+        <div class="items">
+          <details data-pic="2"><summary>(03) Pages de réservation</summary>
+            <p>Nous construisons ou refondons la page où mène la publicité : rapide sur téléphone, l'essentiel visible tout de suite, appel ou réservation en un geste. Google juge aussi cette page quand il évalue une annonce — et cela pèse sur le prix du clic.</p></details>
+        </div>
+      </div>
+      <div class="grp">
+        <p class="cat">Mesurer et piloter</p>
+        <div class="items">
+          <details data-pic="3"><summary>(04) Suivi des appels et des demandes</summary>
+            <p>Chaque demande porte une référence que nous retrouvons jusqu'à la réservation. Un appel ne compte que s'il dure assez longtemps pour être une vraie demande.</p></details>
+          <details data-pic="4"><summary>(05) Lecture dans vos outils</summary>
+            <p>Nous lisons l'agenda, la billetterie, le carnet de courses : c'est là qu'est le résultat. Meta comme Google ne voient qu'une partie de ce que leurs annonces produisent.</p></details>
+        </div>
+      </div>
+      <div class="pic" aria-hidden="true">
+        <img class="on" src="img/svc-meta.jpg" alt="" loading="lazy">
+        <img src="img/svc-google.jpg" alt="" loading="lazy">
+        <img src="img/svc-page.jpg" alt="" loading="lazy">
+        <img src="img/svc-appels.jpg" alt="" loading="lazy">
+        <img src="img/svc-mesure.jpg" alt="" loading="lazy">
+      </div>
+    </div>
+    <p class="fine" style="margin-top:1.5rem;max-width:46em">Nous ne construisons de page que pour une campagne que nous pilotons : ce n'est pas un service de création de sites.</p>
+  </section>
+
+  <!-- RÉSULTATS -->
+  <section class="sec lg res center" id="resultats">
+    <h2 class="lab2 r">Résultats mesurés · 2026 · mis à jour le 17/09/2026</h2>
+    <div class="figs">
+      <div class="fg r">
+        <p class="lab dot">Meta Ads · bien-être</p>
+        <p class="fig">×5&nbsp;à&nbsp;7</p>
+        <p class="figl">réservations par jour</p>
+        <p>Hausse des réservations de visites par jour pour un club bien-être à Bruxelles, sur les six premières semaines de campagne, par rapport aux semaines qui ont précédé. Compté dans l'agenda du client.</p>
+      </div>
+      <div class="fg r" style="--d:120ms">
+        <p class="lab dot">Meta Ads · événementiel</p>
+        <p class="fig">85&nbsp;%</p>
+        <p class="figl">des billets payants scannés</p>
+        <p>Part des billets payants achetés en ligne qui ont été scannés à l'entrée, sur deux soirées à Bruxelles (juillet et août 2026). Compté au scanner, hors ventes à la porte.</p>
+      </div>
+      <div class="fg r" style="--d:240ms">
+        <p class="lab dot">Google Ads · transport</p>
+        <p class="fig">2&nbsp;sur&nbsp;3</p>
+        <p class="figl">appels comptés comme demandes</p>
+        <p>Part des appels venus des annonces désormais comptés comme de vraies demandes, contre moins d'1&nbsp;sur&nbsp;5 avec le réglage par défaut de Google. Analyse de 50 appels, septembre 2026.</p>
+      </div>
+    </div>
+    <p class="fine">Chiffres relevés dans les comptes que nous pilotons et dans les outils de nos clients (agenda, billetterie, journal d'appels), sur les périodes indiquées. Ils se lisent contre l'historique du même client — ni moyenne de marché, ni promesse de résultat. Aucun client n'est nommé sans son accord.</p>
+  </section>
+
+  <!-- MÉTHODE -->
+  <section class="sec meth" id="methode">
+    <h2 class="st" data-reveal>Notre méthode</h2>
+    <div class="rail" tabindex="0" aria-label="Notre méthode, en cartes">
+      <div class="track">
+        <article class="tc c-green"><p>Votre activité, vos concurrents, la façon dont vos clients achètent — et vos comptes Meta ou Google Ads s'ils existent. Le diagnostic est écrit et il vous reste, que nous travaillions ensemble ou non.</p><div><h3 class="sub">D'abord, nous regardons</h3><p class="who">Étape 01</p></div></article>
+        <article class="tc c-cream"><p>Google Ads si vos clients vous cherchent déjà, Meta s'il faut aller les chercher, les deux quand c'est justifié. Et parfois aucun : si le canal ou le moment ne sont pas les bons, nous le disons avant de dépenser.</p><div><h3 class="sub">Nous choisissons le canal</h3><p class="who">Étape 02</p></div></article>
+        <article class="tc c-yellow"><p>Avant d'augmenter un budget, nous vérifions que la page transforme et que chaque demande est comptée. Quand nous refaisons une page, ses adresses restent les mêmes — les annonces en place continuent de fonctionner.</p><div><h3 class="sub">Nous réparons la page et la mesure</h3><p class="who">Étape 03</p></div></article>
+        <article class="tc c-pink"><p>Nous lisons les chiffres, nous proposons un geste chiffré, vous dites oui, nous exécutons. Aucun euro dépensé sans votre accord, chaque modification datée et expliquée. Nous ne publions jamais à votre place.</p><div><h3 class="sub">Vous validez chaque euro</h3><p class="who">Étape 04</p></div></article>
+        <article class="tc c-blue"><p>Comptes publicitaires, audiences et données de mesure : à votre nom, sur vos accès. Le budget est payé directement à Meta ou à Google ; nos honoraires sont facturés à part. Si nous nous arrêtons, vous ne repartez pas de zéro.</p><div><h3 class="sub">Tout vous appartient</h3><p class="who">Étape 05</p></div></article>
+        <article class="tc c-green"><p>Ceux qui pilotent vos publicités construisent aussi la page où elles mènent : quand un chiffre bouge, nous savons s'il vient de l'annonce ou de la page. Un petit nombre de comptes à la fois — c'est notre capacité réelle, pas un argument de rareté.</p><div><h3 class="sub">Petite équipe, ligne directe</h3><p class="who">L'équipe</p></div></article>
+        <article class="tc c-cream"><ul><li>Pas de référencement naturel.</li><li>Pas d'animation de vos réseaux sociaux au quotidien.</li><li>Pas de site vitrine sans campagne derrière.</li><li>Pas de promesse de première position sur Google.</li></ul><div><h3 class="sub">Ce que nous ne faisons pas</h3><p class="who">Pour être clairs</p></div></article>
+
+        <!-- copie décorative pour le défilement continu -->
+        <article class="tc c-green" aria-hidden="true"><p>Votre activité, vos concurrents, la façon dont vos clients achètent — et vos comptes Meta ou Google Ads s'ils existent. Le diagnostic est écrit et il vous reste, que nous travaillions ensemble ou non.</p><div><h3 class="sub">D'abord, nous regardons</h3><p class="who">Étape 01</p></div></article>
+        <article class="tc c-cream" aria-hidden="true"><p>Google Ads si vos clients vous cherchent déjà, Meta s'il faut aller les chercher, les deux quand c'est justifié. Et parfois aucun : si le canal ou le moment ne sont pas les bons, nous le disons avant de dépenser.</p><div><h3 class="sub">Nous choisissons le canal</h3><p class="who">Étape 02</p></div></article>
+        <article class="tc c-yellow" aria-hidden="true"><p>Avant d'augmenter un budget, nous vérifions que la page transforme et que chaque demande est comptée. Quand nous refaisons une page, ses adresses restent les mêmes — les annonces en place continuent de fonctionner.</p><div><h3 class="sub">Nous réparons la page et la mesure</h3><p class="who">Étape 03</p></div></article>
+        <article class="tc c-pink" aria-hidden="true"><p>Nous lisons les chiffres, nous proposons un geste chiffré, vous dites oui, nous exécutons. Aucun euro dépensé sans votre accord, chaque modification datée et expliquée. Nous ne publions jamais à votre place.</p><div><h3 class="sub">Vous validez chaque euro</h3><p class="who">Étape 04</p></div></article>
+        <article class="tc c-blue" aria-hidden="true"><p>Comptes publicitaires, audiences et données de mesure : à votre nom, sur vos accès. Le budget est payé directement à Meta ou à Google ; nos honoraires sont facturés à part. Si nous nous arrêtons, vous ne repartez pas de zéro.</p><div><h3 class="sub">Tout vous appartient</h3><p class="who">Étape 05</p></div></article>
+        <article class="tc c-green" aria-hidden="true"><p>Ceux qui pilotent vos publicités construisent aussi la page où elles mènent : quand un chiffre bouge, nous savons s'il vient de l'annonce ou de la page. Un petit nombre de comptes à la fois — c'est notre capacité réelle, pas un argument de rareté.</p><div><h3 class="sub">Petite équipe, ligne directe</h3><p class="who">L'équipe</p></div></article>
+        <article class="tc c-cream" aria-hidden="true"><ul><li>Pas de référencement naturel.</li><li>Pas d'animation de vos réseaux sociaux au quotidien.</li><li>Pas de site vitrine sans campagne derrière.</li><li>Pas de promesse de première position sur Google.</li></ul><div><h3 class="sub">Ce que nous ne faisons pas</h3><p class="who">Pour être clairs</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="pre" id="contact">
+    <img src="img/fond.jpg" srcset="img/fond-900.jpg 900w, img/fond.jpg 1920w" sizes="100vw" alt="" loading="lazy">
+    <div class="pre-in">
+      <h2 class="d2" data-reveal>Ne restez pas dans le bruit.</h2>
+      <p class="r">Un appel vidéo, avec une personne qui connaît son métier : nous regardons ensemble votre activité et, si vous diffusez déjà, vos comptes Meta ou Google Ads. À la suite de l'appel, vous recevez un diagnostic écrit — quel canal, quelle page, quoi mesurer. Sans engagement.</p>
+      <div class="row">
+        <a class="btn" href="mailto:contact@dejavudigital.be?subject=R%C3%A9server%20un%20appel%20vid%C3%A9o&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20appel%20vid%C3%A9o.%0A%0AMon%20activit%C3%A9%20%3A%20%0AMes%20disponibilit%C3%A9s%20%3A%20%0AMon%20num%C3%A9ro%20%3A%20%0A"><span class="roll"><span>Réserver un appel vidéo</span></span></a>
+        <a class="btn ghost" href="mailto:contact@dejavudigital.be?subject=R%C3%A9server%20un%20appel%20vid%C3%A9o&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20appel%20vid%C3%A9o.%0A%0AMon%20activit%C3%A9%20%3A%20%0AMes%20disponibilit%C3%A9s%20%3A%20%0AMon%20num%C3%A9ro%20%3A%20%0A" style="text-transform:none"><span class="roll"><span>contact@dejavudigital.be</span></span></a>
+      </div>
+      <p class="cta-note"><em>Pour identifier vos besoins et des solutions actionnables, maintenant.</em></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="ft-in">
+  <div class="ft">
+    <a class="brand d2" href="#top">Dejavu<br>Digital<span class="ag" style="font-family:var(--text);text-transform:none;letter-spacing:-.01em">(Agence)</span></a>
+    <nav aria-label="Pied de page">
+      <a href="#top">Accueil</a>
+      <a href="#dossiers">Dossiers</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#methode">Méthode</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="co">
+      <span>Meta Ads · Google Ads</span>
+      <a class="m" href="mailto:contact@dejavudigital.be?subject=R%C3%A9server%20un%20appel%20vid%C3%A9o&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20appel%20vid%C3%A9o.%0A%0AMon%20activit%C3%A9%20%3A%20%0AMes%20disponibilit%C3%A9s%20%3A%20%0AMon%20num%C3%A9ro%20%3A%20%0A">contact@dejavudigital.be</a>
+    </div>
+  </div>
+  <div class="legal">
+    <div>© 2026 DEJAVU DIGITAL LTD — Companies House n° 14175430 (UK)</div>
+    <div>Résultats mesurés dans les comptes que nous pilotons — ni moyenne, ni promesse de performance.</div>
+  </div>
+  </div>
+  <div class="ft-dark" aria-hidden="true"></div>
+</footer>
+
+<div class="cur" id="cur" aria-hidden="true"><span>Lire le dossier&nbsp;&nbsp;•&nbsp;&nbsp;Lire le dossier&nbsp;&nbsp;•&nbsp;&nbsp;Lire le dossier&nbsp;&nbsp;•&nbsp;&nbsp;Lire le dossier&nbsp;&nbsp;•&nbsp;&nbsp;</span></div>
+
+<script src="js/gsap.min.js" defer></script>
+<script src="js/ScrollTrigger.min.js" defer></script>
+<script src="js/SplitText.min.js" defer></script>
+<script src="js/lenis.min.js" defer></script>
+<script>
+/* Tout ce qui suit est un PLUS : sans JavaScript (ou si une bibliothèque ne charge pas), la page reste entière et lisible. */
+document.addEventListener('DOMContentLoaded',function(){
+  var d=document,w=window,root=d.documentElement;
+  var reduce=w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine=w.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* garde-fou : l'écran d'ouverture part en CSS ; on le retire de toute façon */
+  /* expertise : l'image suit la ligne survolée ou ouverte */
+  var pics=d.querySelectorAll('.svc .pic img');
+  function showPic(i){ [].forEach.call(pics,function(p,k){p.classList.toggle('on',k===+i);}); }
+  [].forEach.call(d.querySelectorAll('.svc details'),function(el){
+    el.addEventListener('mouseenter',function(){showPic(el.getAttribute('data-pic'));});
+    el.addEventListener('toggle',function(){ if(el.open)showPic(el.getAttribute('data-pic')); });
+  });
+
+  if(reduce || !w.gsap || !w.ScrollTrigger) return;
+  var gsap=w.gsap, ST=w.ScrollTrigger;
+  gsap.registerPlugin(ST); if(w.SplitText) gsap.registerPlugin(w.SplitText);
+  root.classList.add('js');
+
+  /* lettres des boutons qui roulent une à une */
+  [].forEach.call(d.querySelectorAll('.roll'),function(r){
+    var t=r.textContent; r.textContent='';
+    var host=r.closest('a,button'); if(host&&!host.hasAttribute('aria-label')) host.setAttribute('aria-label',t.trim()); r.setAttribute('aria-hidden','true');
+    t.split('').forEach(function(c,i){var s=d.createElement('span'); s.textContent=c; s.style.setProperty('--i',i); r.appendChild(s);});
+  });
+
+  /* défilement adouci (souris/trackpad uniquement ; le tactile garde son défilement natif) */
+  var lenis=null;
+  if(fine && w.Lenis){
+    lenis=new w.Lenis({lerp:.1,wheelMultiplier:.9,smoothTouch:false});
+    lenis.on('scroll',ST.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000);});
+    gsap.ticker.lagSmoothing(0);
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var id=a.getAttribute('href'); if(id.length<2||id==='#menu'||a.hasAttribute('data-close')||a.closest('#menu')) return; /* les liens du menu naviguent nativement : c'est ce qui referme le panneau :target */
+      a.addEventListener('click',function(e){var t=d.querySelector(id); if(!t) return; e.preventDefault();
+        lenis.scrollTo(t,{duration:1.4,easing:function(x){return 1-Math.pow(1-x,4);}}); history.replaceState(null,'',id);});
+    });
+  }
+
+  /* blocs simples : montée + fondu, par groupes */
+  gsap.set('.r',{opacity:0,y:28});
+  ST.batch('.r',{start:'top 90%',once:true,onEnter:function(els){
+    gsap.to(els,{opacity:1,y:0,duration:1.1,ease:'power3.out',stagger:.09,overwrite:true});}});
+
+  /* grandes phrases : ligne par ligne, chaque ligne sort de son masque */
+  function lines(){
+    [].forEach.call(d.querySelectorAll('[data-reveal]'),function(el){
+      if(!w.SplitText){return;}
+      w.SplitText.create(el,{type:'lines',mask:'lines',autoSplit:true,linesClass:'ln',onSplit:function(self){
+        return gsap.from(self.lines,{yPercent:112,duration:1.15,ease:'power3.out',stagger:.085,
+          scrollTrigger:{trigger:el,start:'top 86%',once:true}});
+      }});
+    });
+  }
+  (d.fonts&&d.fonts.ready?d.fonts.ready:Promise.resolve()).then(function(){ lines(); ST.refresh(); });
+  w.addEventListener('load',function(){ ST.refresh(); });
+  /* filet de sécurité : tout bloc déjà passé à l'écran et resté caché est montré */
+  setInterval(function(){ [].forEach.call(d.querySelectorAll('.r'),function(el){
+    if(el.getBoundingClientRect().top<w.innerHeight*.92 && getComputedStyle(el).opacity==='0' && !gsap.isTweening(el)){ gsap.to(el,{opacity:1,y:0,duration:.8,ease:'power3.out'}); } }); },1200);
+
+  /* parallaxes */
+  gsap.to('.slides',{yPercent:18,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero-in',{yPercent:-25,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  [].forEach.call(d.querySelectorAll('.card .vis img,.portrait img'),function(im){
+    gsap.fromTo(im,{yPercent:-6},{yPercent:6,ease:'none',scrollTrigger:{trigger:im.parentNode,start:'clamp(top bottom)',end:'bottom top',scrub:.8}});
+  });
+  gsap.fromTo('.pre>img',{yPercent:-9},{yPercent:9,ease:'none',scrollTrigger:{trigger:'.pre',start:'top bottom',end:'bottom top',scrub:true}});
+  /* le pied de page se découvre sous le contenu, d'abord sombre puis jaune */
+  gsap.fromTo('.ft-in',{yPercent:-50},{yPercent:0,ease:'none',scrollTrigger:{trigger:'footer',start:'top bottom',end:'bottom bottom',scrub:true}});
+  gsap.fromTo('.ft-dark',{opacity:.55},{opacity:0,ease:'none',scrollTrigger:{trigger:'footer',start:'top bottom',end:'bottom bottom',scrub:true}});
+
+  /* les pastilles de navigation s'effacent quand on descend, reviennent quand on remonte */
+  var nav=d.getElementById('nav');
+  ST.create({start:500,end:'max',onUpdate:function(self){nav.classList.toggle('away',self.direction===1);},
+    onLeaveBack:function(){nav.classList.remove('away');}});
+
+  /* rail de cartes : défilement continu, entraînable à la souris, accéléré par le défilement de la page */
+  (function(){
+    var track=d.querySelector('.track'); if(!track||!fine) return;
+    root.classList.add('js-rail');
+    var x=0,base=-.55,vel=base,half=0,drag=false,lastX=0;
+    function measure(){half=track.scrollWidth/2;}
+    measure(); w.addEventListener('resize',measure);
+    track.addEventListener('pointerdown',function(e){drag=true;lastX=e.clientX;track.setPointerCapture(e.pointerId);});
+    track.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-lastX;lastX=e.clientX;x+=dx;vel=dx;});
+    function up(){drag=false;}
+    track.addEventListener('pointerup',up); track.addEventListener('pointercancel',up);
+    var hover=false; track.addEventListener('mouseenter',function(){hover=true;}); track.addEventListener('mouseleave',function(){hover=false;});
+    var boost=0; if(lenis){lenis.on('scroll',function(e){boost=Math.max(-40,Math.min(40,e.velocity));});}
+    var rail=d.querySelector('.rail'),focus=false;
+    rail.addEventListener('focusin',function(){focus=true;}); rail.addEventListener('focusout',function(){focus=false;});
+    rail.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){x-=340;e.preventDefault();} if(e.key==='ArrowLeft'){x+=340;e.preventDefault();} });
+    gsap.ticker.add(function(time,dt){
+      var k=Math.min(3,(dt||16.7)/16.7);   /* 1 = une image à 60 i/s : la vitesse ne dépend plus de l'écran */
+      if(!drag){ var target=(hover||focus)?0:base-Math.abs(boost)*.12; vel+=(target-vel)*(1-Math.pow(.94,k)); x+=vel*k; boost*=Math.pow(.9,k); }
+      if(half){ while(x<=-half)x+=half; while(x>0)x-=half; }
+      track.style.transform='translate3d('+x+'px,0,0)';
+    });
+  })();
+
+  if(!fine) return;
+
+  /* pastille jaune qui suit le curseur sur les dossiers (apparition avec rebond) */
+  var cur=d.getElementById('cur');
+  var qx=gsap.quickTo(cur,'x',{duration:.45,ease:'power3'}),qy=gsap.quickTo(cur,'y',{duration:.45,ease:'power3'});
+  gsap.set(cur,{xPercent:-50,yPercent:-50,scale:0});
+  [].forEach.call(d.querySelectorAll('.card .vis'),function(v){
+    v.addEventListener('mouseenter',function(){gsap.to(cur,{scale:1,duration:.5,ease:'back.out(3)',overwrite:'auto'});});
+    v.addEventListener('mouseleave',function(){gsap.to(cur,{scale:0,duration:.3,ease:'back.in(2)',overwrite:'auto'});});
+    v.addEventListener('mousemove',function(e){qx(e.clientX);qy(e.clientY);});
+    v.addEventListener('click',function(){var dt=v.parentNode.querySelector('details'); if(dt)dt.open=!dt.open;});
+    v.style.cursor='pointer';
+  });
+
+  /* traînée d'images derrière le curseur dans le manifeste */
+  var mani=d.querySelector('.mani'),srcs=[].map.call(pics,function(p){return p.getAttribute('src');}),n=0,lx=0,ly=0;
+  if(mani&&srcs.length){
+    mani.addEventListener('mousemove',function(e){
+      var dx=e.clientX-lx,dy=e.clientY-ly; if(dx*dx+dy*dy<110*110) return;
+      var b=mani.getBoundingClientRect(),im=new Image();
+      im.src=srcs[n++%srcs.length]; im.className='trail'; im.alt='';
+      im.style.left=(e.clientX-b.left)+'px'; im.style.top=(e.clientY-b.top)+'px';
+      mani.appendChild(im);
+      gsap.timeline({onComplete:function(){ if(im.parentNode)im.parentNode.removeChild(im); }})
+        .fromTo(im,{xPercent:-50,yPercent:-50,scale:.4,opacity:0,rotation:gsap.utils.random(-8,8)},{scale:1,opacity:1,duration:.5,ease:'back.out(3)'})
+        .to(im,{x:dx*.6,y:dy*.6+40,duration:.9,ease:'power2.out'},0)
+        .to(im,{scale:.2,opacity:0,duration:.45,ease:'power2.in'},.75);
+      lx=e.clientX; ly=e.clientY;
+    });
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEJAVU DIGITAL — comparaison de polices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,500;87.5,600&family=Bricolage+Grotesque:wght@500;600&family=Hanken+Grotesk:wght@500;600&family=Host+Grotesk:wght@500;600&family=Instrument+Sans:wght@500;600&family=Inter+Tight:wght@500;600&family=Schibsted+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#050505;--yellow:#fef073;--blue:#5a92e7;--gut:1.3125rem}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#fff;color:var(--ink);font:500 1rem/1.3 system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  header{padding:2rem var(--gut) 1.5rem;border-bottom:1.6px solid var(--ink)}
+  header h1{font-size:1.5rem;letter-spacing:-.02em}
+  header p{margin-top:.5rem;max-width:46em;opacity:.75}
+  section{border-bottom:1.6px solid var(--ink)}
+  .tag{display:flex;align-items:center;gap:.7rem;padding:1rem var(--gut);background:var(--yellow);border-bottom:1.6px solid var(--ink);
+       font:600 .94rem/1.2 system-ui,sans-serif;text-transform:uppercase}
+  .tag b{display:inline-grid;place-items:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--ink);color:#fff;font-size:1.05rem}
+  .tag span{opacity:.7;text-transform:none;font-weight:500}
+  .dark{background:#16121c;color:#fff;text-align:center;padding:3.2rem var(--gut)}
+  .light{padding:2.6rem var(--gut) 3rem}
+  .t1{font-family:var(--d);font-weight:600;text-transform:uppercase;letter-spacing:-.02em;line-height:.84;
+      font-size:clamp(3.6rem,calc(9vw + 1.2rem),8rem)}
+  .sub{font-family:var(--t);font-weight:500;font-size:clamp(1.3rem,1.95vw,1.75rem);line-height:1.04;letter-spacing:-.01em;
+       max-width:24em;margin:1rem auto 0}
+  .btn{display:inline-block;margin-top:1.8rem;border:1.6px solid var(--ink);box-shadow:0 3.75px 0 var(--ink);border-radius:800px;
+       background:#fff;color:var(--ink);padding:.95rem 1.7rem;font:500 .94rem/1.4 var(--t);text-transform:uppercase;letter-spacing:-.015em}
+  .t2{font-family:var(--d);font-weight:600;text-transform:uppercase;letter-spacing:-.01em;line-height:.86;
+      font-size:clamp(1.9rem,5.3vw,4.75rem)}
+  .st{font-family:var(--t);font-weight:500;font-size:clamp(1.6rem,2.92vw,2.625rem);line-height:1.05;letter-spacing:-.025em;
+      max-width:26em;margin-top:2rem}
+  .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:2rem var(--gut);margin-top:2.4rem;align-items:end}
+  @media(max-width:760px){.row{grid-template-columns:minmax(0,1fr)}}
+  .fig{font-family:var(--d);font-weight:600;font-size:clamp(3.7rem,8.4vw,7.6rem);line-height:.86;letter-spacing:-.045em;white-space:nowrap}
+  .lab{font-family:var(--t);font-size:.94rem;text-transform:uppercase;letter-spacing:-.01em;margin-top:.6rem}
+  .lab::before{content:"";display:inline-block;width:.65rem;height:.65rem;border-radius:50%;background:var(--blue);margin-right:.6rem}
+  .p{font-family:var(--t);font-weight:500;font-size:clamp(1.05rem,1.39vw,1.25rem);line-height:1.25;letter-spacing:-.01em;max-width:30em}
+  .A{--d:"Inter Tight",sans-serif;--t:"Instrument Sans",sans-serif}
+  .B{--d:"Host Grotesk",sans-serif;--t:"Host Grotesk",sans-serif}
+  .C{--d:"Bricolage Grotesque",sans-serif;--t:"Bricolage Grotesque",sans-serif}
+  .D{--d:"Archivo",sans-serif;--t:"Hanken Grotesk",sans-serif}
+  .D .t1,.D .t2,.D .fig{font-stretch:87.5%}
+  .E{--d:"Schibsted Grotesk",sans-serif;--t:"Schibsted Grotesk",sans-serif}
+</style>
+</head>
+<body>
+<header>
+  <h1>Quelle police pour le site ?</h1>
+  <p>Cinq polices libres, montrées sur les mêmes éléments du site : le titre, le sous-titre, un grand titre, une phrase forte, un grand chiffre et un paragraphe. Dis-moi simplement la lettre (A, B, C, D ou E). La A est celle qui est en ligne aujourd'hui.</p>
+</header>
+
+<!-- le même bloc, cinq fois : seule la classe (A…E) change -->
+<section class="A">
+  <div class="tag"><b>A</b> Inter Tight + Instrument Sans <span>— celle du site actuel</span></div>
+  <div class="dark"><p class="t1">Dejavu<br>Digital</p><p class="sub">Publicité Meta &amp; Google Ads, et la page qui transforme le clic en réservation.</p><span class="btn">Recevoir le diagnostic</span></div>
+  <div class="light"><p class="t2">Attirer.<br>Convertir.<br>Mesurer.</p><p class="st">Nous gérons vos publicités sur Google, Instagram et Facebook — et la page où vos clients arrivent après le clic.</p>
+    <div class="row"><div><p class="fig">×5&nbsp;à&nbsp;7</p><p class="lab">Réservations par jour</p></div><p class="p">Hausse des réservations de visites par jour pour un club bien-être à Bruxelles, sur les six premières semaines de campagne, par rapport aux semaines qui ont précédé. Compté dans l'agenda du client.</p></div></div>
+</section>
+
+<section class="B">
+  <div class="tag"><b>B</b> Host Grotesk <span>— neutre et nette, la plus proche d'une Helvetica</span></div>
+  <div class="dark"><p class="t1">Dejavu<br>Digital</p><p class="sub">Publicité Meta &amp; Google Ads, et la page qui transforme le clic en réservation.</p><span class="btn">Recevoir le diagnostic</span></div>
+  <div class="light"><p class="t2">Attirer.<br>Convertir.<br>Mesurer.</p><p class="st">Nous gérons vos publicités sur Google, Instagram et Facebook — et la page où vos clients arrivent après le clic.</p>
+    <div class="row"><div><p class="fig">×5&nbsp;à&nbsp;7</p><p class="lab">Réservations par jour</p></div><p class="p">Hausse des réservations de visites par jour pour un club bien-être à Bruxelles, sur les six premières semaines de campagne, par rapport aux semaines qui ont précédé. Compté dans l'agenda du client.</p></div></div>
+</section>
+
+<section class="C">
+  <div class="tag"><b>C</b> Bricolage Grotesque <span>— du caractère, des lettres entaillées, très « studio »</span></div>
+  <div class="dark"><p class="t1">Dejavu<br>Digital</p><p class="sub">Publicité Meta &amp; Google Ads, et la page qui transforme le clic en réservation.</p><span class="btn">Recevoir le diagnostic</span></div>
+  <div class="light"><p class="t2">Attirer.<br>Convertir.<br>Mesurer.</p><p class="st">Nous gérons vos publicités sur Google, Instagram et Facebook — et la page où vos clients arrivent après le clic.</p>
+    <div class="row"><div><p class="fig">×5&nbsp;à&nbsp;7</p><p class="lab">Réservations par jour</p></div><p class="p">Hausse des réservations de visites par jour pour un club bien-être à Bruxelles, sur les six premières semaines de campagne, par rapport aux semaines qui ont précédé. Compté dans l'agenda du client.</p></div></div>
+</section>
+
+<section class="D">
+  <div class="tag"><b>D</b> Archivo resserrée + Hanken Grotesk <span>— titres compacts et puissants, texte très lisible</span></div>
+  <div class="dark"><p class="t1">Dejavu<br>Digital</p><p class="sub">Publicité Meta &amp; Google Ads, et la page qui transforme le clic en réservation.</p><span class="btn">Recevoir le diagnostic</span></div>
+  <div class="light"><p class="t2">Attirer.<br>Convertir.<br>Mesurer.</p><p class="st">Nous gérons vos publicités sur Google, Instagram et Facebook — et la page où vos clients arrivent après le clic.</p>
+    <div class="row"><div><p class="fig">×5&nbsp;à&nbsp;7</p><p class="lab">Réservations par jour</p></div><p class="p">Hausse des réservations de visites par jour pour un club bien-être à Bruxelles, sur les six premières semaines de campagne, par rapport aux semaines qui ont précédé. Compté dans l'agenda du client.</p></div></div>
+</section>
+
+<section class="E">
+  <div class="tag"><b>E</b> Schibsted Grotesk <span>— éditoriale, un peu plus large, ton « presse »</span></div>
+  <div class="dark"><p class="t1">Dejavu<br>Digital</p><p class="sub">Publicité Meta &amp; Google Ads, et la page qui transforme le clic en réservation.</p><span class="btn">Recevoir le diagnostic</span></div>
+  <div class="light"><p class="t2">Attirer.<br>Convertir.<br>Mesurer.</p><p class="st">Nous gérons vos publicités sur Google, Instagram et Facebook — et la page où vos clients arrivent après le clic.</p>
+    <div class="row"><div><p class="fig">×5&nbsp;à&nbsp;7</p><p class="lab">Réservations par jour</p></div><p class="p">Hausse des réservations de visites par jour pour un club bien-être à Bruxelles, sur les six premières semaines de campagne, par rapport aux semaines qui ont précédé. Compté dans l'agenda du client.</p></div></div>
+</section>
+</body>
+</html>
